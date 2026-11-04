@@ -1,0 +1,4 @@
+{"marca":"cocinas-la-flora","codigo":"CLF-009","tipo":"reel","escenas":[
+ {"titulo":"Cocina oculta no es un restaurante *escondido*","texto":"Es una cocina solo para producir","imagen":"assets/img/chef_feliz.webp","segundos":3.5,"fs":108},
+ {"titulo":"Sin mesas ni atención al público","barra":true,"imagen":"assets/img/burger_papas.webp","segundos":3.5},
+ {"titulo":"Tus clientes piden. Tú *cocinas*.","texto":"Desde $1,3 M al mes · solo el espacio","imagen":"assets/img/wok.webp","segundos":3.5}]}

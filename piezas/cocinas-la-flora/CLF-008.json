@@ -1,0 +1,4 @@
+{"marca":"cocinas-la-flora","codigo":"CLF-008","tipo":"reel","escenas":[
+ {"titulo":"Esto trae tu cocina *privada*","texto":"En el norte de Cali, lista para producir","imagen":"assets/img/cocina_casa.webp","segundos":3.5},
+ {"titulo":"2 puntos de gas, agua y electricidad","barra":true,"imagen":"assets/img/wok.webp","segundos":3.5,"fs":100},
+ {"titulo":"Solo espacio, con equipos u *opción de compra*","texto":"Desde $1.300.000 al mes · contrato desde 6 meses","imagen":"assets/img/emplatado.webp","segundos":3.5,"fs":104}]}

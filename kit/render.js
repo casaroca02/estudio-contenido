@@ -98,7 +98,7 @@ function laminaBody(m, l, i, n, H) {
 
 // Capa de texto transparente para una escena de Reel
 function escenaOverlay(m, e) {
-  return `<div class="s" style="background:transparent"><div class="lab">${esc(m.etiqueta)}</div>
+  return `<div class="s" style="background:transparent"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,12,.82) 0%,rgba(15,13,12,.55) 38%,rgba(15,13,12,0) 62%)"></div><div class="lab">${esc(m.etiqueta)}</div>
     <div class="top">${e.barra ? '<div class="bar"></div>' : ''}<h1 style="--fs:${e.fs || 118}px">${rich(e.titulo)}</h1>
     ${e.texto ? `<div style="height:40px"></div><p style="color:${m.colores.resalte};font-weight:700">${rich(e.texto)}</p>` : ''}</div></div>`;
 }
