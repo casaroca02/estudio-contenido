@@ -1,0 +1,11 @@
+{
+  "name": "estudio-contenido-kit",
+  "private": true,
+  "description": "Renderizador gratuito de piezas para redes (carruseles, historias, posts y Reels).",
+  "dependencies": {
+    "@fontsource/archivo": "^5.0.0",
+    "@fontsource/dm-mono": "^5.0.0",
+    "@fontsource/instrument-serif": "^5.0.0",
+    "@fontsource/inter-tight": "^5.0.0"
+  }
+}

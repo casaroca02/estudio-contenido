@@ -1,0 +1,40 @@
+{
+  "nombre": "Cocinas La Flora",
+  "slug": "cocinas-la-flora",
+  "etiqueta": "COCINAS LA FLORA · NORTE DE CALI",
+  "marca_html": "Cocinas <em>La Flora</em>",
+  "colores": {
+    "fondo_oscuro": "#0F0D0C",
+    "fondo_claro": "#F4EEE3",
+    "acento": "#FF5B35",
+    "acento_texto": "#C23A16",
+    "arena": "#E8DFCF",
+    "resalte": "#FFD84D",
+    "durazno": "#FFB385",
+    "salvia": "#C5D3B4"
+  },
+  "fuentes": {
+    "display": "Archivo",
+    "acento": "Instrument Serif",
+    "texto": "Inter Tight",
+    "datos": "DM Mono"
+  },
+  "cta": "Escríbenos COCINA",
+  "cta_boton": "WhatsApp 320 770 9238",
+  "cta_web": "cocinaslaflora.com · La Flora, Chipichape",
+  "logo_llama": "assets/logo/CocinasLaFlora_llama.svg",
+  "imagenes": [
+    "assets/img/wok.webp",
+    "assets/img/emplatado.webp",
+    "assets/img/burger_papas.webp",
+    "assets/img/chef_feliz.webp",
+    "assets/img/cocina_casa.webp",
+    "assets/img/hero_poster.webp"
+  ],
+  "videos": [
+    "assets/video/clf_reel_ganchos.mp4",
+    "assets/video/clf_reel_domicilios.mp4",
+    "assets/video/clf_reel_negocio.mp4",
+    "assets/video/clf_testimonio.mp4"
+  ]
+}

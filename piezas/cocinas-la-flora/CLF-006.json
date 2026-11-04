@@ -1,0 +1,6 @@
+{"marca":"cocinas-la-flora","codigo":"CLF-006","tipo":"reel",
+ "escenas":[
+  {"titulo":"¿Vendes postres desde *casa*?","texto":"Tu cocina propia en el norte de Cali","imagen":"assets/img/emplatado.webp","segundos":3.5},
+  {"titulo":"Produce más sin invadir la cocina de tu familia","barra":true,"imagen":"assets/img/cocina_casa.webp","segundos":3.5,"fs":96},
+  {"titulo":"Desde *$1,3 M* al mes","texto":"Solo el espacio · contrato desde 6 meses","imagen":"assets/img/wok.webp","segundos":3.5}
+ ]}
