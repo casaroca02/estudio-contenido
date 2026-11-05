@@ -1,0 +1,63 @@
+{
+ "marca": "cocinas-la-flora",
+ "codigo": "CLF-004",
+ "tipo": "reel",
+ "musica": "Hey Linda",
+ "musica_inicio": 47,
+ "escenas": [
+  {
+   "modo": "kinetic",
+   "fondo": "acento",
+   "titulo": "¿Tienes un negocio de *comida*?",
+   "texto": "Crece sin abrir otro local",
+   "top": 640,
+   "fs": 140,
+   "segundos": 3.0
+  },
+  {
+   "modo": "foto",
+   "titulo": "Abre una sede de *producción*",
+   "imagen": "assets/reales/modulo_cocina_puerta.jpg",
+   "texto": "En el norte de Cali, para llegar a más zonas con tus domicilios.",
+   "segundos": 3.8,
+   "fs": 88
+  },
+  {
+   "modo": "checklist",
+   "titulo": "Lo que *tienes*",
+   "items": [
+    "Cocina 100 % privada",
+    "Solo espacio, con equipos u opción de compra",
+    "Contrato desde 6 meses"
+   ],
+   "mini": "assets/reales/modulo_cocina_vertical.jpg",
+   "mini_top": 1250,
+   "mini_alto": 480,
+   "mini_delay": 1.8,
+   "segundos": 3.8
+  },
+  {
+   "modo": "contador",
+   "antes": "Tu sede desde",
+   "valor": 1.3,
+   "prefijo": "$",
+   "sufijo": " M",
+   "titulo": "al mes · solo el *espacio*",
+   "texto": "Servicios cerca de $350.000",
+   "mini": "assets/reales/modulo_cocina_frente.jpg",
+   "mini_top": 1080,
+   "mini_alto": 600,
+   "mini_delay": 1.6,
+   "segundos": 3.6
+  },
+  {
+   "modo": "personaje",
+   "personaje": "andres",
+   "pose": "libreta",
+   "titulo": "Te armamos la *propuesta*",
+   "texto": "Nos ajustamos a lo que necesitas",
+   "segundos": 3.2
+  }
+ ],
+ "cta_segundos": 3.4
+}

@@ -1,0 +1,53 @@
+{
+ "marca": "cocinas-la-flora",
+ "codigo": "CLF-003",
+ "tipo": "reel",
+ "musica": "House - Flying",
+ "escenas": [
+  {
+   "modo": "personaje",
+   "personaje": "emprendedora",
+   "pose": "celular",
+   "titulo": "Los pedidos crecen y mi cocina *ya no da*",
+   "segundos": 3.6
+  },
+  {
+   "modo": "kinetic",
+   "fondo": "acento",
+   "titulo": "De la cocina de la casa a una cocina *profesional*",
+   "top": 600,
+   "fs": 120,
+   "segundos": 3.4
+  },
+  {
+   "modo": "foto",
+   "titulo": "Tu cocina *privada*",
+   "imagen": "assets/reales/modulo_cocina_vertical.jpg",
+   "texto": "Más espacio para producir, sin invadir tu casa.",
+   "segundos": 3.4
+  },
+  {
+   "modo": "contador",
+   "antes": "Tu cocina desde",
+   "valor": 1.3,
+   "prefijo": "$",
+   "sufijo": " M",
+   "titulo": "al mes · solo el *espacio*",
+   "texto": "Contrato desde 6 meses",
+   "mini": "assets/reales/modulo_entrada_vertical.jpg",
+   "mini_top": 1080,
+   "mini_alto": 600,
+   "mini_delay": 1.6,
+   "segundos": 3.6
+  },
+  {
+   "modo": "personaje",
+   "personaje": "andres",
+   "pose": "libreta",
+   "titulo": "Te acompañamos a dar *el paso*",
+   "texto": "Cocina oculta, apoyo visible",
+   "segundos": 3.2
+  }
+ ],
+ "cta_segundos": 3.4
+}

@@ -1,0 +1,81 @@
+{
+ "marca": "cocinas-la-flora",
+ "codigo": "CLF-002",
+ "tipo": "reel",
+ "musica": "Que la gasolina",
+ "escenas": [
+  {
+   "modo": "kinetic",
+   "fondo": "acento",
+   "titulo": "¿Vendes comida a *domicilio*?",
+   "texto": "Mira lo que pagas de más",
+   "top": 640,
+   "fs": 140,
+   "segundos": 3.0
+  },
+  {
+   "modo": "barras",
+   "titulo": "Lo que pagas *al mes*",
+   "items": [
+    {
+     "label": "Local en el norte de Cali",
+     "valor": 5.3,
+     "prefijo": "$",
+     "sufijo": " M",
+     "texto_valor": "$5,3 M"
+    },
+    {
+     "label": "Cocinas La Flora",
+     "valor": 1.3,
+     "prefijo": "$",
+     "sufijo": " M",
+     "texto_valor": "$1,3 M",
+     "destacado": true
+    }
+   ],
+   "nota": "Local: valor de referencia. Cocina: solo el espacio.",
+   "mini": "assets/reales/modulo_cocina_frente.jpg",
+   "mini_top": 1180,
+   "mini_alto": 520,
+   "mini_delay": 2.2,
+   "segundos": 4.4
+  },
+  {
+   "modo": "vs",
+   "titulo": "Tus clientes *no lo ven*",
+   "izq": {
+    "titulo": "Local a la calle",
+    "items": [
+     "Comedor y fachada",
+     "Meseros",
+     "Arriendo alto"
+    ]
+   },
+   "der": {
+    "titulo": "Cocina oculta",
+    "items": [
+     "Solo producción",
+     "100 % privada",
+     "Desde $1,3 M"
+    ]
+   },
+   "segundos": 3.8
+  },
+  {
+   "modo": "foto",
+   "titulo": "Tu cocina *privada*",
+   "imagen": "assets/reales/modulo_cocina_puerta.jpg",
+   "texto": "Fotos reales en Chipichape, norte de Cali.",
+   "segundos": 3.2
+  },
+  {
+   "modo": "personaje",
+   "personaje": "andres",
+   "pose": "libreta",
+   "titulo": "Produce más, paga *menos*",
+   "texto": "Contrato desde 6 meses, poco papeleo",
+   "segundos": 3.4
+  }
+ ],
+ "cta_segundos": 3.4
+}
