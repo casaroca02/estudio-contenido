@@ -39,6 +39,6 @@ Ser el primer resultado en Google (orgánico y Google Maps) en Cali para las bú
 - [ ] Optimizar peso de videos e imágenes (Core Web Vitals).
 
 ## Pendientes de Carlos
-- Conectar Cloudflare Pages al repositorio (carpeta `web/`) para que cada commit se publique solo.
+- [x] 5 nov: Cloudflare Pages conectado al repositorio (proyecto cocinaslaflora-web, carpeta `web/`); dominio cocinaslaflora.com y www movidos al proyecto nuevo.
 - Google Search Console: verificar el dominio (Cloudflare lo hace con un clic) y enviar el sitemap.
 - Pasar los códigos de Google Analytics 4 y del Pixel de Meta.
