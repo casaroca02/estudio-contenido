@@ -25,12 +25,14 @@
   "cta_web": "cocinaslaflora.com · La Flora, Chipichape",
   "logo_llama": "assets/logo/CocinasLaFlora_llama.svg",
   "imagenes": [
+    "assets/reales/modulo_frente_amplio.jpg",
     "assets/img/chef_feliz.webp",
     "assets/stock/cocina-profesional/unsplash-GjY4qZfMybw.jpg",
     "assets/stock/cocina-profesional/pixabay-2616326.jpg",
     "assets/stock/emplatado/unsplash-KDVGz-qnHfc.jpg",
     "assets/stock/hamburguesas/unsplash-PxJ9zkM2wdA.jpg",
-    "assets/stock/cocina-profesional/unsplash-rO6709B116E.jpg"
+    "assets/stock/cocina-profesional/unsplash-rO6709B116E.jpg",
+    "assets/reales/modulo_frente.jpg"
   ],
   "videos": [
     "assets/video/clf_reel_ganchos.mp4",
@@ -157,5 +159,19 @@
     "Desde $1,3 M al mes",
     "100 % privada",
     "Contrato desde 6 meses"
-  ]
+  ],
+  "fotos_reales": {
+    "amplias": [
+      "assets/reales/modulo_frente_amplio.jpg",
+      "assets/reales/modulo_frente.jpg",
+      "assets/reales/modulo_panoramica.jpg"
+    ],
+    "detalle_solo_galeria": [
+      "assets/reales/linea_caliente.jpg",
+      "assets/reales/neveras_industriales.jpg",
+      "assets/reales/despacho_empaques.jpg",
+      "assets/reales/cuarto_frio_neveras.jpg",
+      "assets/reales/modulo_vacio_nevera.jpg"
+    ]
+  }
 }

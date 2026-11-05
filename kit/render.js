@@ -178,9 +178,31 @@ function css(m, W, H) {
   .ffoto{position:absolute;left:40px;right:40px;top:40px;height:${tall ? 1000 : 700}px;border-radius:48px;background-size:cover;background-position:center;filter:saturate(1.15) contrast(1.05) brightness(1.03)}
   .sticker{position:absolute;left:84px;top:${tall ? 1004 : 706}px;background:${c.resalte};color:${c.fondo_oscuro};font:800 30px/1 Archivo;letter-spacing:2px;text-transform:uppercase;padding:16px 28px;border-radius:40px;transform:rotate(-3deg);box-shadow:0 10px 30px rgba(15,13,12,.18)}
   .sticker.b{left:auto;right:84px;background:${c.durazno};transform:rotate(3deg)}
+  .chipreal{position:absolute;right:76px;top:${tall ? 230 : 72}px;background:#fff;color:${c.fondo_oscuro};font:800 26px/1 Archivo;letter-spacing:2px;padding:14px 22px;border-radius:30px;box-shadow:0 8px 24px rgba(15,13,12,.18)}
+  .gal{position:absolute;left:40px;right:40px;display:grid;gap:14px}
+  .gal div{border-radius:28px;background-size:cover;background-position:center;filter:saturate(1.08) contrast(1.04)}
+  .gal .w2{grid-column:span 2}
+  .lista{margin-top:${tall ? 30 : 22}px;display:flex;flex-direction:column;gap:${tall ? 16 : 12}px}
+  .lista div{background:#fff;border-radius:24px;padding:${tall ? '22px 28px' : '16px 24px'};font:700 ${tall ? 36 : 30}px/1.2 "Inter Tight";display:flex;gap:18px;align-items:center;color:${c.fondo_oscuro}}
+  .lista b{font:900 ${tall ? 40 : 32}px Archivo;color:${c.acento_texto};min-width:${tall ? 56 : 46}px}
+  .lista small{display:block;font:500 ${tall ? 30 : 25}px "Inter Tight";color:#5A5048;margin-top:4px}
   .fhead{position:absolute;left:76px;right:76px;top:${tall ? 1112 : 790}px}
   .fhead h1{font:900 var(--fs,${tall ? 88 : 74}px)/1.04 Archivo;letter-spacing:-2px}
   .fhead p{margin-top:${tall ? 26 : 20}px;font:500 ${tall ? 40 : 34}px/1.3 "Inter Tight";color:#4A423C}
+  /* Variantes de fondo v2: oscuro (negativo), acento (tomate), salvia, durazno */
+  .luz.v-oscuro{background:${c.fondo_oscuro};color:${c.fondo_claro}}
+  .luz.v-oscuro .fhead p{color:#D9CFC2}
+  .luz.v-oscuro h1 em{background:none;color:${c.resalte}}
+  .luz.v-oscuro .pg{color:#D9CFC2!important}
+  .luz.v-acento{background:${c.acento};color:#fff}
+  .luz.v-acento .fhead p{color:#FFF1EA}
+  .luz.v-acento h1 em{color:${c.fondo_oscuro}}
+  .luz.v-acento .fcta{background:${c.fondo_oscuro};box-shadow:0 18px 40px rgba(15,13,12,.35)}
+  .luz.v-acento .sticker{background:#fff}
+  .luz.v-acento .desliza{color:#fff}
+  .luz.v-salvia{background:#DDE6D3}
+  .luz.v-durazno{background:#FFE1CF}
+  .luz.v-oscuro .desliza{color:${c.resalte}}
   .fhead .desliza{display:inline-block;margin-top:${tall ? 30 : 24}px;font:700 34px "Inter Tight";color:${c.acento_texto}}
   .fcta{position:absolute;left:52px;right:52px;bottom:var(--cb,${tall ? 250 : 46}px);background:${c.acento};color:#fff;border-radius:40px;padding:${tall ? '34px 40px' : '26px 36px'};display:flex;align-items:center;gap:30px;box-shadow:0 18px 40px rgba(194,58,22,.28)}
   .fcta .ico{flex:none;width:${tall ? 104 : 88}px;height:${tall ? 104 : 88}px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
@@ -229,8 +251,9 @@ function ctaBody(m, spec, video) {
   const bottom = tall ? (video ? 380 : 250) : 46;
   const titulo = spec.cta_titulo || m.cta_titulo || 'Tu cocina *privada* en el norte de Cali';
   const puntos = (m.cta_puntos || []).map(x => `<span class="pill">${esc(x)}</span>`).join('');
-  return `<div class="s luz">
-    <div style="position:absolute;left:0;right:0;top:${tall ? 260 : 110}px;display:flex;flex-direction:column;align-items:center;gap:${tall ? 22 : 14}px">${llamaSvg(m.colores.acento)}<div class="marca">${m.marca_html}</div></div>
+  const v = spec.variante && spec.variante !== 'claro' ? ` v-${spec.variante}` : '';
+  return `<div class="s luz${v}">
+    <div style="position:absolute;left:0;right:0;top:${tall ? 260 : 110}px;display:flex;flex-direction:column;align-items:center;gap:${tall ? 22 : 14}px">${llamaSvg(spec.variante === 'acento' ? '#fff' : m.colores.acento)}<div class="marca">${m.marca_html}</div></div>
     <div style="position:absolute;left:76px;right:76px;top:${tall ? 640 : 420}px;text-align:center"><h1 style="--fs:${spec.cta_fs || (tall ? 96 : 80)}px;font-weight:900">${rich(titulo)}</h1>
       <div class="pills" style="margin-top:${tall ? 50 : 36}px">${puntos}</div></div>
     <div style="position:absolute;left:0;right:0;bottom:${bottom + (tall ? 200 : 168)}px;text-align:center" class="mono">${esc(m.cta_web)}<div class="cod" style="margin-top:10px">Código ${esc(spec.codigo)}</div></div>
@@ -244,8 +267,21 @@ function foodieBody(m, l, i, n, H, fmt) {
   const st = `<div class="sticker">${esc(l.sticker || m.sticker || 'Norte de Cali')}</div>${l.sticker2 ? `<div class="sticker b">${esc(l.sticker2)}</div>` : ''}`;
   const desliza = fmt === 'carrusel' && i === 0 ? `<div class="desliza">Desliza →</div>` : '';
   const recorte = l.recorte ? `background-color:${l.fondo_foto || m.colores.durazno};background-size:auto 96%;background-position:center bottom;background-repeat:no-repeat;` : '';
-  return `<div class="s luz"><div class="ffoto" style="background-image:url(${fileUrl(m, img)});${recorte}${l.foco ? 'background-position:' + l.foco : ''}"></div>${st}
-    <div class="fhead"><h1${l.fs ? ` style="--fs:${l.fs}px"` : ''}>${rich(l.titulo)}</h1>${l.texto ? `<p>${rich(l.texto)}</p>` : ''}${desliza}</div>
+  const v = l.variante && l.variante !== 'claro' ? ` v-${l.variante}` : '';
+  const tall = H > 1500, alto = l.alto || (tall ? 1000 : 700);
+  const pos = l.alto ? `<style>.ffoto{height:${alto}px}.sticker{top:${40 + alto - 36}px}.fhead{top:${40 + alto + 72}px}</style>` : '';
+  const chip = l.foto_real ? `<div class="chipreal"><svg width="26" height="22" viewBox="0 0 24 20" style="vertical-align:-3px;margin-right:8px"><path d="M8 1h8l2 3h3a2 2 0 012 2v11a2 2 0 01-2 2H3a2 2 0 01-2-2V6a2 2 0 012-2h3z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="11" r="4" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>FOTO REAL</div>` : '';
+  const lista = l.lista ? `<div class="lista">${l.lista.map((x, k) => { const [t, sub] = String(x).split('|'); return `<div><b>${String(k + 1).padStart(2, '0')}</b><span>${rich(t)}${sub ? `<small>${rich(sub)}</small>` : ''}</span></div>`; }).join('')}</div>` : '';
+  if (l.galeria) {
+    const g = l.galeria, gh = l.alto || (tall ? 1000 : 700);
+    const filas = Math.ceil(g.filter((x, k) => !(g.length % 2 && k === g.length - 1)).length / 2) + (g.length % 2 ? 1 : 0);
+    const celdas = g.map((x, k) => `<div${g.length % 2 && k === g.length - 1 ? ' class="w2"' : ''} style="background-image:url(${fileUrl(m, x)})"></div>`).join('');
+    return `<div class="s luz${v}">${pos}<div class="gal" style="top:40px;height:${gh}px;grid-template-columns:1fr 1fr;grid-template-rows:repeat(${filas},1fr)">${celdas}</div>${chip}${st}
+    <div class="fhead"><h1${l.fs ? ` style="--fs:${l.fs}px"` : ''}>${rich(l.titulo)}</h1>${l.texto ? `<p>${rich(l.texto)}</p>` : ''}${lista}${desliza}</div>
+    ${conCta ? ctaBloque(m, l) : ''}${conCta ? '' : pg}</div>`;
+  }
+  return `<div class="s luz${v}">${pos}<div class="ffoto" style="background-image:url(${fileUrl(m, img)});${recorte}${l.foco ? 'background-position:' + l.foco : ''}"></div>${chip}${st}
+    <div class="fhead"><h1${l.fs ? ` style="--fs:${l.fs}px"` : ''}>${rich(l.titulo)}</h1>${l.texto ? `<p>${rich(l.texto)}</p>` : ''}${lista}${desliza}</div>
     ${conCta ? ctaBloque(m, l) : ''}${conCta ? '' : pg}</div>`;
 }
 
@@ -322,12 +358,13 @@ function laminaBody(m, l, i, n, H, fmt) {
   }
   // Láminas de texto: bloque agrupado y centrado, fondos claros que alternan (luz, salvia, durazno)
   const tinte = ['#FFF9F1', '#EEF3E8', '#FFEADF'][i % 3];
-  const cb = (inner) => `<div class="s claro" style="background:${l.fondo ? '' : tinte}">${lab}<div style="position:absolute;left:84px;right:84px;top:${H > 1500 ? 300 : 170}px;bottom:${H > 1500 ? 420 : 130}px;display:flex;flex-direction:column;justify-content:center">${inner}</div>${pg}</div>`;
+  const oscura = l.variante === 'oscuro' || l.fondo === 'oscuro';
+  const cb = (inner) => `<div class="s ${oscura ? '' : 'claro'}" style="${oscura ? '' : 'background:' + (l.fondo ? '' : tinte)}">${lab}<div style="position:absolute;left:84px;right:84px;top:${H > 1500 ? 300 : 170}px;bottom:${H > 1500 ? 420 : 130}px;display:flex;flex-direction:column;justify-content:center">${inner}</div>${pg}</div>`;
   if (l.tipo === 'dato') {
-    return cb(`<div class="big">${rich(l.dato)}</div><div style="height:24px"></div><h2 style="--fs:${l.fs || 76}px">${rich(l.titulo)}</h2><div style="height:40px"></div><p style="font-size:44px;color:#4A423C">${rich(l.texto)}</p>`);
+    return cb(`<div class="big">${rich(l.dato)}</div><div style="height:24px"></div><h2 style="--fs:${l.fs || 76}px">${rich(l.titulo)}</h2><div style="height:40px"></div><p style="font-size:44px;color:${oscura ? '#D9CFC2' : '#4A423C'}">${rich(l.texto)}</p>`);
   }
   if (l.tipo === 'claro') {
-    return cb(`<div class="bar"></div><h2 style="--fs:${l.fs || 92}px;font-weight:900">${rich(l.titulo)}</h2><div style="height:44px"></div><p style="font-size:46px;color:#4A423C">${rich(l.texto)}</p>`);
+    return cb(`<div class="bar"></div><h2 style="--fs:${l.fs || 92}px;font-weight:900">${rich(l.titulo)}</h2><div style="height:44px"></div><p style="font-size:46px;color:${oscura ? '#D9CFC2' : '#4A423C'}">${rich(l.texto)}</p>`);
   }
   // portada (por defecto): diseño v2 foodie vibrante
   return foodieBody(m, l, i, n, H, fmt);

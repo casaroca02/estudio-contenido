@@ -1,6 +1,6 @@
 # Guía creativa del agente de contenido
 
-Léela completa antes de escribir o producir cualquier pieza: Reel, historia, carrusel o post. Vale para todas las marcas. Los datos propios de cada marca (oferta, precios, personajes, voces, colores) están en `marcas/<marca>/marca.json` y en su página de Notion.
+Léela completa antes de escribir o producir cualquier pieza: Reel, historia, carrusel o post. Lee también `REFERENCIAS.md` (competencia, cuentas de referencia, ganchos que funcionan e ideas para el Radar). Estos dos archivos son la fuente viva: cada ajuste que pide Carlos se escribe aquí, y todos los agentes los leen al inicio de cada corrida. Vale para todas las marcas. Los datos propios de cada marca (oferta, precios, personajes, voces, colores) están en `marcas/<marca>/marca.json` y en su página de Notion.
 
 ## 1. Para qué existe cada pieza
 
@@ -33,7 +33,8 @@ Regla de oro: si la pieza habla de postres, se ven postres. Si habla de hamburgu
 
 Busca la imagen en este orden:
 
-1. **Material propio** del Banco de material en Notion y `marcas/<marca>/assets/`: fotos y videos reales de las cocinas.
+1. **Fotos reales** de las cocinas en `marcas/<marca>/assets/reales/` (aprobadas por Carlos el 5 nov). Son la prueba más fuerte: úsalas al menos en 1 de cada 3 piezas y márcalas con `foto_real: true`. Las amplias (`modulo_frente_amplio`, `modulo_frente`, `modulo_panoramica`) sirven para la foto principal con `alto` entre 620 y 900. Las de detalle (`linea_caliente`, `neveras_industriales`, `despacho_empaques`, `cuarto_frio_neveras`, `modulo_vacio_nevera`) son pequeñas: van solo en `galeria`, nunca solas a pantalla completa. Describe solo lo que se ve en la foto; no inventes equipos.
+   También sirve el material propio del Banco de material en Notion.
 2. **Personajes de la marca** (`personajes` en marca.json, modo o lámina `personaje`): para explicar, preguntar u objetar.
 3. **Galerías de stock libres de regalías:** `orshot_search_stock_media` con `orientation: "vertical"` y 1 a 3 palabras en inglés (`dessert`, `burger`, `home kitchen cooking`, `food delivery`). Mira las miniaturas y elige la foto que muestre el tema con más claridad, luz cálida y espacio libre para el texto. Luego `orshot_use_stock_media` con su `ref` te da una URL permanente. Es gratis, de uso comercial y no exige atribución. Para video de stock: `vidiq_generate_broll` (1 crédito; la atribución al autor va en el caption). Antes de buscar, revisa si ya hay fotos del tema en `marcas/<marca>/assets/stock/`.
 4. **Infografía o motion graphic** del kit cuando el mensaje es una cifra, una comparación o un proceso.
@@ -49,6 +50,8 @@ Carlos rechazó el diseño anterior por plano, oscuro, cargado y difuso, con fot
 - **Historia y post:** la lámina por defecto (sin `tipo`) ya aplica este diseño: foto arriba con esquinas redondeadas, sticker amarillo, titular grande en Archivo negra sobre fondo claro, la palabra clave resaltada con marcador amarillo y el CTA **abajo**, en un bloque tomate con letra de palo grande: «Escríbenos COCINA · WhatsApp 320 770 9238». No repitas el CTA dentro de `texto`.
 - **Protagonista por tema:** comida cuando se habla de producto o pedidos; cocina industrial cuando se habla del espacio; Chef Andrés cuando se habla de cifras o costos.
 - **Carrusel:** la portada usa el mismo diseño (sin CTA, con «Desliza →»); las láminas de texto alternan fondos claros (crema, salvia y durazno) y el cierre es claro, con beneficios y el CTA abajo.
+- **Rota el fondo** (`variante`): claro (por defecto), `oscuro` (negativo, carbón con resaltado amarillo), `acento` (tomate), `salvia` y `durazno`. Nunca dos piezas seguidas con la misma variante. En la semana: unas 3 claras, 2 oscuras, 1 tomate y 1 salvia o durazno. Las láminas de texto del carrusel también aceptan `variante: "oscuro"`.
+- **Herramientas de la lámina v2:** `alto` (alto de la foto), `foto_real` (sello «FOTO REAL»), `galeria` (2 a 4 fotos en cuadrícula), `lista` (hasta 3 puntos «Título|detalle» en tarjetas blancas), `sticker` y `sticker2`.
 - **Una idea por pieza o por lámina.**
 - El titular lleva máximo 7 palabras y 2 líneas, más 1 línea de apoyo si hace falta. Si necesitas más texto, divídelo en otra lámina o llévalo al caption.
 - En video con foto de stock, usa el tipo `capas`: la foto ocupa todo el fondo y el texto va en una tarjeta blanca. En Reels con foto, la tarjeta va arriba para no chocar con los subtítulos.

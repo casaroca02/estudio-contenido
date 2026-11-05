@@ -1,6 +1,6 @@
 # Estudio de contenido
 
-**Antes de producir, lee `GUIA.md`**: objetivo de cada pieza, imagen relevante, diseño limpio, personajes y voces.
+**Antes de producir, lee `GUIA.md` y `REFERENCIAS.md`**: objetivo de cada pieza, imagen relevante, diseño limpio, personajes y voces.
 
 Kit gratuito para producir piezas de redes sociales (carruseles, historias, posts y Reels con motion graphics) con la identidad de cada marca, y alojarlas en un enlace público que Metricool pueda tomar.
 
@@ -26,7 +26,7 @@ Carrusel: `{"tipo":"carrusel","laminas":[…]}` (se agrega solo la lámina final
 
 | Tipo de lámina | Campos | Uso |
 |---|---|---|
-| sin `tipo` (portada, diseño v2) | `titulo`, `texto`, `imagen`, `sticker`, `sticker2`, `foco`, `fs`, `cta:false` | Foto nítida arriba, titular grande en fondo claro y CTA abajo (historia y post). En carrusel no lleva CTA y muestra «Desliza →». |
+| sin `tipo` (portada, diseño v2) | `titulo`, `texto`, `imagen` o `galeria:[…]`, `alto`, `foto_real`, `lista:["Título\|detalle"]`, `variante` (claro, oscuro, acento, salvia, durazno), `sticker`, `sticker2`, `foco`, `fs`, `cta:false` | Foto nítida arriba, titular grande en fondo claro y CTA abajo (historia y post). En carrusel no lleva CTA y muestra «Desliza →». |
 | `dato` | `dato`, `titulo`, `texto` | Una cifra grande |
 | `claro` | `titulo`, `texto` | Idea en texto |
 | `barras` | `titulo`, `items:[{label, valor, texto_valor, destacado}]`, `nota` | Comparación de cifras |

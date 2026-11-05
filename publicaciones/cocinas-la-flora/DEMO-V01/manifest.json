@@ -1,0 +1,11 @@
+{
+  "codigo": "DEMO-V01",
+  "marca": "cocinas-la-flora",
+  "tipo": "carrusel",
+  "archivos": [
+    "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-V01/01.jpg",
+    "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-V01/02.jpg",
+    "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-V01/03.jpg",
+    "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-V01/04.jpg"
+  ]
+}
