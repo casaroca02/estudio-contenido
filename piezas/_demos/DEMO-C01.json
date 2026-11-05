@@ -1,0 +1,6 @@
+{"marca":"cocinas-la-flora","codigo":"DEMO-C01","tipo":"carrusel","laminas":[
+ {"tipo":"barras","titulo":"Lo que pagas *al mes*","items":[{"label":"Local a la calle","valor":5.3,"texto_valor":"$5,3 M"},{"label":"Cocina La Flora · solo el espacio","valor":1.3,"texto_valor":"$1,3 M","destacado":true}],"nota":"Cocina La Flora: desde $1.300.000 al mes, contrato desde 6 meses."},
+ {"tipo":"vs","titulo":"Cocinar en casa vs. *cocina propia*","izq":{"titulo":"En casa","items":["Compartes la cocina con tu familia","Espacio limitado","Difícil crecer"]},"der":{"titulo":"La Flora","items":["Cocina 100 % privada","Hecha para domicilios","Norte de Cali"]}},
+ {"tipo":"pasos","titulo":"Cómo *empezar*","items":["Escríbenos COCINA|WhatsApp 320 770 9238","Elige tu modalidad|Solo espacio, con equipos u opción de compra","Firma desde 6 meses|Y empieza a producir"]},
+ {"tipo":"checklist","fondo":"oscuro","titulo":"Tu cocina *oculta*","items":["100 % privada","Sin atención al público","La Flora · Chipichape","Contrato desde 6 meses"]}
+]}
