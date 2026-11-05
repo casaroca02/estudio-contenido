@@ -10,7 +10,7 @@ Kit gratuito para producir piezas de redes sociales (carruseles, historias, post
 2. Cada pieza se describe en un archivo `piezas/<marca>/<CÓDIGO>.json`.
 3. `node kit/render.js piezas/<marca>/<CÓDIGO>.json` genera los archivos en `publicaciones/<marca>/<CÓDIGO>/` y un `manifest.json` con sus URLs públicas (en Reels incluye `duracion_segundos`).
 4. Se hace commit y push a `main`. Las URLs `https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/...` sirven como `media` en Metricool.
-5. Reels con voz y música: postproducción con `vidiq_compose` (ver abajo). El kit produce el video mudo con subtítulos; vidIQ le pone la voz y la música.
+5. Reels: el kit ya pone la música gratis (`musica`). Solo si hay voz de ElevenLabs se mezcla con `vidiq_compose` (ver abajo).
 
 Preparación (una vez por sesión): `cd kit && npm install`. Requiere Node, Playwright con Chromium y ffmpeg. Un Reel con motion graphics tarda unos 50 s en renderizar.
 
@@ -79,7 +79,7 @@ Probado el 4 nov con tres fotos de Pixabay, la voz de AD-berto y música.
 
 `subtitulos` (para Reels con voz en off): `{"texto": "<guion exacto de la voz>", "inicio": 0.3, "duracion": <segundos de la voz>}`. Quedan quemados en el video, a salvo de la interfaz de Instagram.
 
-`musica` (opcional, archivo local con licencia): `"marcas/<marca>/assets/audio/<archivo>"`. Normalmente la música se pone en la postproducción.
+`musica`: nombre de una pista de `audio.musica_libre` en marca.json (p. ej. `"Cooking show"`) o ruta local. El kit repite el tramo de loop de la pista hasta cubrir el video, con fundidos; `volumen_musica` (0.6 con voz, 0.95 sin voz). Es gratis: **úsalo siempre para la música** en vez de vidIQ. Pistas nuevas: `orshot_search_stock_media` (type music) y la cola (`<url de cdn.orshot.com> marcas/<marca>/assets/audio/<archivo>.m4a`).
 
 ## Postproducción de audio (voz + música)
 

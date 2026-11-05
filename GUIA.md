@@ -25,7 +25,9 @@ Reparte la semana así: unas 4 piezas de atraer, 3 de conectar y 2 de convertir.
 
 **Propuesta de valor: «Cocina oculta, apoyo visible.»** El apoyo se ve en: flexibilidad, entender la necesidad de cada cliente y ajustarnos a ella, arranque rápido, poca burocracia y papeleo, y costos bajos frente a un local. Cada pieza de conectar o convertir debe mostrar al menos uno de estos apoyos, no solo el espacio.
 
-**Argumentos oficiales** (solo estos; las cifras salen de Notion): desde $1.300.000 al mes solo el espacio, contrato desde 6 meses, sin depósito, cocina 100 % privada, **2 o más puntos de gas, agua y electricidad: nos ajustamos a tu necesidad** (nunca escribas «2 puntos de gas» a secas), tres modalidades (solo espacio, con equipos u opción de compra de los equipos), servicios de unos $350.000 al mes en promedio, ubicación en La Flora · Chipichape, norte de Cali.
+**Argumentos oficiales** (solo estos; las cifras salen de Notion): desde $1.300.000 al mes solo el espacio, contrato desde 6 meses, cocina 100 % privada, **2 o más puntos de gas, agua y electricidad: nos ajustamos a tu necesidad** (nunca escribas «2 puntos de gas» a secas), tres modalidades (solo espacio, con equipos u opción de compra de los equipos), servicios de unos $350.000 al mes en promedio, ubicación en La Flora · Chipichape, norte de Cali.
+
+**Prohibido (Carlos, 5 nov 2026): nunca escribas «sin depósito» ni hables de depósito en ninguna pieza, caption, guion, respuesta o mensaje.**
 
 ## 3. La imagen tiene que decir lo mismo que el texto
 
@@ -65,7 +67,7 @@ Carlos rechazó el diseño anterior por plano, oscuro, cargado y difuso, con fot
   - `encuesta` (CLF-H33): dos tarjetas A/B con foto real para que respondan la historia. Elige fotos limpias, sin estanterías cargadas.
   - `collage` (CLF-P01): 2 polaroids grandes y ligeramente giradas sobre tomate (3 en historia). Que ninguna tape el pie de foto de la otra.
   - `inmersiva` (portada de CLF-C06): foto a sangre con un bloque amarillo de titular y chip negro de lugar. Ideal para portadas.
-  - Reel: **motion graphic, no recorrido de fotos a pantalla completa** (Carlos, 5 nov 2026). El primer Reel con fotos reales a sangre (Ken Burns) se vio oscuro y las cocinas se veían viejas. Ahora el modelo es CLF-R01: gancho en tipografía cinética sobre tomate, fotos reales **dentro de tarjetas redondeadas** aclaradas (`modo: "foto"` con puntos que aparecen uno a uno), contador del precio con una foto pequeña (`mini`), pasos con foto pequeña, Chef Andrés y cierre. Usa solo las fotos más claras y modernas (modulo_cocina_frente, modulo_cocina_vertical, modulo_cocina_puerta, modulo_entrada_vertical). **No uses linea_caliente_campana, linea_caliente_despacho ni zona_lavado en video**: se ven viejas.
+  - Reel: **motion graphic, no recorrido de fotos a pantalla completa. Estilo aprobado por Carlos el 5 nov 2026: es el modelo para todos los Reels.** El primer Reel con fotos reales a sangre (Ken Burns) se vio oscuro y las cocinas se veían viejas. Ahora el modelo es CLF-R01: gancho en tipografía cinética sobre tomate, fotos reales **dentro de tarjetas redondeadas** aclaradas (`modo: "foto"` con puntos que aparecen uno a uno), contador del precio con una foto pequeña (`mini`), pasos con foto pequeña, Chef Andrés y cierre. Usa solo las fotos más claras y modernas (modulo_cocina_frente, modulo_cocina_vertical, modulo_cocina_puerta, modulo_entrada_vertical). **No uses linea_caliente_campana, linea_caliente_despacho ni zona_lavado en video**: se ven viejas.
 - **Estado (5 nov 2026): Carlos aprobó las piezas gráficas H31, H32, H33, P01 y C06.** Los 5 estilos (anotada, presenta, encuesta, collage, inmersiva) son ahora referencia aprobada.
 - **Una idea por pieza o por lámina.**
 - El titular lleva máximo 7 palabras y 2 líneas, más 1 línea de apoyo si hace falta. Si necesitas más texto, divídelo en otra lámina o llévalo al caption.
@@ -103,7 +105,7 @@ Carlos rechazó el diseño anterior por plano, oscuro, cargado y difuso, con fot
 - Escribe las cifras en letras en los guiones de voz. Usa frases cortas.
 - Usa voces colombianas cálidas, sin acento regional marcado. Alterna la voz masculina y la femenina según `audio.voces.regla`.
 - **Voz solo con ElevenLabs (Carlos, 5 nov 2026). Esta regla reemplaza la «voz de respaldo» del prompt.** A Carlos no le gustó la voz de vidIQ: está prohibido usar vidIQ u otra app para la voz o gastar sus créditos en voz. Si ElevenLabs falla, haz el Reel en motion graphic sin voz (texto en pantalla) o deja la ficha en Producción con «Voz pendiente: reintentar ElevenLabs» en Notas QA, y reintenta en la siguiente corrida.
-- Usa música del banco, rotada. Mezcla la voz por encima con `duckTo` de la música.
+- **Música gratis (5 nov 2026):** usa las pistas de `audio.musica_libre` (biblioteca de Orshot, uso comercial sin atribución), rotadas, con `"musica": "<nombre>"` en el JSON del Reel: el kit las mezcla sin gastar créditos. Si falta una pista, búscala con `orshot_search_stock_media` (type music) y tráela con la cola (`cdn.orshot.com`). vidIQ solo se usa para mezclar la voz de ElevenLabs con la música, nunca para generar música o voz. Sin voz, sube la música (`volumen_musica` 0.95).
 
 ## 8. Lista de control antes de producir
 

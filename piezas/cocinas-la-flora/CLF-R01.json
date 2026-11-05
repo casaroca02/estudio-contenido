@@ -87,5 +87,7 @@
    "segundos": 3.2
   }
  ],
- "cta_segundos": 3.4
+ "cta_segundos": 3.4,
+ "musica": "Cooking show",
+ "volumen_musica": 0.95
 }

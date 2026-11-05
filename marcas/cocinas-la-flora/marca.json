@@ -88,7 +88,65 @@
       "regla": "Alterna masculina y femenina día a día. Mentor/explicativo = masculina; historia del emprendedor = femenina. T4 compara resultados por voz cada semana.",
       "prohibido": "Voces con acento regional marcado (paisa u otro).",
       "sin_respaldo": "Carlos prohibió voces de otras apps (5 nov 2026). Si ElevenLabs falla: Reel sin voz o pendiente, y reintentar."
-    }
+    },
+    "musica_libre": [
+      {
+        "nombre": "Cooking show",
+        "archivo": "assets/audio/cooking_show.m4a",
+        "bpm": 116,
+        "loop": {
+          "start": 2.069,
+          "end": 14.483
+        },
+        "uso": "Reels de cocina, energía, motion graphics",
+        "volumen": 0.6
+      },
+      {
+        "nombre": "Startup pitch",
+        "archivo": "assets/audio/startup_pitch.m4a",
+        "bpm": 118,
+        "loop": {
+          "start": 2.034,
+          "end": 14.237
+        },
+        "uso": "Precio, cifras, modelo de negocio",
+        "volumen": 0.6
+      },
+      {
+        "nombre": "Bright business",
+        "archivo": "assets/audio/bright_business.m4a",
+        "bpm": 112,
+        "loop": {
+          "start": 2.143,
+          "end": 12.857
+        },
+        "uso": "Anuncios, novedades, pasos",
+        "volumen": 0.6
+      },
+      {
+        "nombre": "Restaurant",
+        "archivo": "assets/audio/restaurant.m4a",
+        "bpm": 88,
+        "loop": {
+          "start": 2.727,
+          "end": 13.636
+        },
+        "uso": "Comida, restaurantes, tono cálido",
+        "volumen": 0.6
+      },
+      {
+        "nombre": "Customer story",
+        "archivo": "assets/audio/customer_story.m4a",
+        "bpm": 84,
+        "loop": {
+          "start": 2.857,
+          "end": 14.286
+        },
+        "uso": "Historias de emprendedores, testimonios",
+        "volumen": 0.6
+      }
+    ],
+    "musica_libre_nota": "Biblioteca de música de Orshot: uso comercial libre, sin atribución. Se mezcla en el kit con \"musica\": \"<nombre>\" en el JSON del Reel. Gratis (no gasta créditos). Rota las pistas."
   },
   "mascota": "La llama del logo con ojos y boca (modo 'llama'). Es el avatar de la marca: habla en globo de texto y con la voz en off.",
   "personajes": {
