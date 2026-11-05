@@ -19,6 +19,7 @@ Ser el primer resultado en Google (orgánico y Google Maps) en Cali para las bú
 | 9 | cocina en arriendo Chipichape / norte de Cali / La Flora | / y /ubicacion-norte-de-cali/ |
 
 ## Reglas que no se rompen
+- **El objetivo es posicionamiento, no rediseño (Carlos, 5 nov 2026).** Prohibido cambiar el diseño de la web: colores, tipografías, estructura, secciones, orden, animaciones, videos e imágenes de la página principal quedan como están. Solo se permite: páginas nuevas aparte con el mismo diseño, metadatos (título, descripción, schema, sitemap, robots), velocidad sin cambio visible, textos con datos equivocados o prohibidos, y un enlace de texto en el pie o en las preguntas hacia las páginas nuevas. Cualquier cambio visible en la página principal se propone a Carlos y espera su aprobación.
 - Solo datos oficiales (GUIA.md sección 2): desde $1.300.000/mes solo el espacio, servicios ~$350.000, contrato desde 6 meses, 3 modalidades, 100 % privada, «2 o más puntos de gas: nos ajustamos a tu necesidad». Nunca «sin depósito». Nunca inventar cifras, clientes ni testimonios.
 - No mostrar a los clientes actuales (Turk House, Caramela, El Chingón) en la web.
 - Dirección exacta: solo en el Perfil de Empresa de Google, salvo que Carlos autorice ponerla en la web (pendiente).
