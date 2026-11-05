@@ -57,10 +57,15 @@ Carlos rechazó el diseño anterior por plano, oscuro, cargado y difuso, con fot
 - **Piezas de referencia aprobadas por Carlos (5 nov 2026).** Antes de diseñar, abre el JSON en `piezas/cocinas-la-flora/` y la imagen en `publicaciones/cocinas-la-flora/` del ejemplo más parecido, y parte de él:
   - Historias con foto de stock por tema: CLF-H26 (cocina industrial), CLF-H27 (persona en cocina profesional, sticker «Nuevo»), CLF-H28 (ollas industriales), CLF-H29 (hamburguesa).
   - Historia con personaje: CLF-H30 (Chef Andrés con libreta para hablar de cifras, con `foco`).
-  - Historias con fotos reales: CLF-H31 (foto amplia y sello), CLF-H32 (fondo oscuro con `lista` de 3 modalidades), CLF-H33 (`galeria` sobre salvia).
-  - Post: CLF-P01 (galería real y CTA abajo).
-  - Carruseles: CLF-C01 (portada con foto, cifras en `dato`, láminas de texto con tintes que alternan, cierre «Cocina oculta, apoyo visible»), CLF-C05 (educativo) y CLF-C06 (recorrido con fotos reales, `lista` y `pasos`).
+  - Carruseles: CLF-C01 (portada con foto, cifras en `dato`, láminas de texto con tintes que alternan, cierre «Cocina oculta, apoyo visible») y CLF-C05 (educativo).
   - Variantes de fondo: `piezas/_demos/DEMO-V01.json`.
+- **Fotos reales: 5 estilos (5 nov 2026).** Carlos rechazó las primeras piezas con fotos reales (foto arriba y texto abajo, todas iguales). Con fotos reales usa estos estilos y no repitas el mismo dos veces seguidas. Están en prueba hasta que Carlos los apruebe:
+  - `anotada` (CLF-H31, lámina 2 de CLF-C06): foto grande con 3 o 4 puntos numerados que señalan lo que se ve (campana, 2 o más puntos de gas, lavaplatos, cocina privada). Ubica cada punto sobre el objeto real; si la etiqueta choca con otra, usa `lado: "izq"`.
+  - `presenta` (CLF-H32, lámina 3 de CLF-C06): foto real a sangre y Chef Andrés recortado (sin fondo) con globo arriba. Lleva Etiqueta IA.
+  - `encuesta` (CLF-H33): dos tarjetas A/B con foto real para que respondan la historia. Elige fotos limpias, sin estanterías cargadas.
+  - `collage` (CLF-P01): 2 polaroids grandes y ligeramente giradas sobre tomate (3 en historia). Que ninguna tape el pie de foto de la otra.
+  - `inmersiva` (portada de CLF-C06): foto a sangre con un bloque amarillo de titular y chip negro de lugar. Ideal para portadas.
+  - Reel con fotos reales: CLF-R01 (4 escenas de 2 a 3 s con tarjeta blanca arriba, Chef Andrés con el precio y cierre; las escenas se sincronizan con lo que dice la voz).
 - **Una idea por pieza o por lámina.**
 - El titular lleva máximo 7 palabras y 2 líneas, más 1 línea de apoyo si hace falta. Si necesitas más texto, divídelo en otra lámina o llévalo al caption.
 - En video con foto de stock, usa el tipo `capas`: la foto ocupa todo el fondo y el texto va en una tarjeta blanca. En Reels con foto, la tarjeta va arriba para no chocar con los subtítulos.
