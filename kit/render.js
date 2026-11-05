@@ -186,6 +186,25 @@ function css(m, W, H) {
   .lista div{background:#fff;border-radius:24px;padding:${tall ? '22px 28px' : '16px 24px'};font:700 ${tall ? 36 : 30}px/1.2 "Inter Tight";display:flex;gap:18px;align-items:center;color:${c.fondo_oscuro}}
   .lista b{font:900 ${tall ? 40 : 32}px Archivo;color:${c.acento_texto};min-width:${tall ? 56 : 46}px}
   .lista small{display:block;font:500 ${tall ? 30 : 25}px "Inter Tight";color:#5A5048;margin-top:4px}
+  /* Estilos con fotos reales (5 nov): anotada, encuesta, collage, inmersiva, presenta */
+  .fullfoto{position:absolute;left:0;right:0;top:0;background-size:cover;background-position:center;filter:saturate(1.08) contrast(1.03)}
+  .pin{position:absolute;display:flex;align-items:center;gap:12px;transform:translate(-32px,-32px)}
+  .pin.izq{flex-direction:row-reverse;transform:translate(calc(-100% + 32px),-32px)}
+  .pin b{flex:none;width:64px;height:64px;border-radius:50%;background:${c.acento};color:#fff;font:900 32px/64px Archivo;text-align:center;box-shadow:0 0 0 6px rgba(255,255,255,.85),0 8px 20px rgba(15,13,12,.3)}
+  .pin span{background:#fff;color:${c.fondo_oscuro};font:800 30px/1 "Inter Tight";padding:14px 20px;border-radius:16px;box-shadow:0 8px 20px rgba(15,13,12,.2);white-space:nowrap}
+  .opcion{position:absolute;left:52px;right:52px;border-radius:40px;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 18px 40px rgba(15,13,12,.18)}
+  .opcion .letra{position:absolute;left:28px;top:28px;width:104px;height:104px;border-radius:50%;background:${c.resalte};color:${c.fondo_oscuro};font:900 60px/104px Archivo;text-align:center}
+  .opcion .rot{position:absolute;left:0;right:0;bottom:0;background:#fff;padding:22px 34px;font:800 44px/1.1 Archivo;color:${c.fondo_oscuro}}
+  .opcion .rot small{display:block;font:600 30px "Inter Tight";color:#5A5048;margin-top:6px}
+  .polaroid{position:absolute;background:#fff;padding:18px 18px 70px;box-shadow:0 20px 45px rgba(15,13,12,.28)}
+  .polaroid div{background-size:cover;background-position:center}
+  .polaroid p{position:absolute;left:0;right:0;bottom:18px;text-align:center;font:700 30px "Inter Tight";color:${c.fondo_oscuro}}
+  .bloque{position:absolute;left:56px;max-width:${W - 140}px;background:${c.resalte};color:${c.fondo_oscuro};padding:34px 42px;border-radius:28px;box-shadow:0 18px 40px rgba(15,13,12,.25)}
+  .bloque h1{font:900 var(--fs,${tall ? 92 : 78}px)/1.02 Archivo;letter-spacing:-2px}
+  .bloque h1 em{color:${c.acento_texto};background:none}
+  .bloque p{margin-top:16px;font:600 ${tall ? 38 : 32}px/1.25 "Inter Tight"}
+  .chipnegro{position:absolute;background:${c.fondo_oscuro};color:#fff;font:800 28px/1 Archivo;letter-spacing:2px;padding:16px 24px;border-radius:30px}
+  .presenta-pj{position:absolute;bottom:0;filter:drop-shadow(0 20px 40px rgba(15,13,12,.35))}
   .fhead{position:absolute;left:76px;right:76px;top:${tall ? 1112 : 790}px}
   .fhead h1{font:900 var(--fs,${tall ? 88 : 74}px)/1.04 Archivo;letter-spacing:-2px}
   .fhead p{margin-top:${tall ? 26 : 20}px;font:500 ${tall ? 40 : 34}px/1.3 "Inter Tight";color:#4A423C}
@@ -341,8 +360,55 @@ function fondoClase(l, def) {
   return f === 'claro' ? 'claro' : f === 'acento' ? 'acento' : '';
 }
 
+function pinsHtml(l) {
+  return (l.puntos || []).map((p, k) => `<div class="pin${p.lado === 'izq' ? ' izq' : ''}" style="left:${p.x}%;top:${p.y}%"><b>${k + 1}</b><span>${esc(p.texto)}</span></div>`).join('');
+}
+const camSvg = `<svg width="26" height="22" viewBox="0 0 24 20" style="vertical-align:-3px;margin-right:8px"><path d="M8 1h8l2 3h3a2 2 0 012 2v11a2 2 0 01-2 2H3a2 2 0 01-2-2V6a2 2 0 012-2h3z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="11" r="4" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>`;
+// Estilos con fotos reales
+function realBody(m, l, i, n, H, fmt) {
+  const tall = H > 1500, W = 1080;
+  const conCta = fmt !== 'carrusel' && l.cta !== false;
+  const v = l.variante && l.variante !== 'claro' ? ` v-${l.variante}` : '';
+  const pg = n > 1 ? `<div class="pg" style="color:${l.variante === 'oscuro' ? '#D9CFC2' : '#4A423C'}">${i + 1}/${n}</div>` : '';
+  const real = l.foto_real !== false ? `<div class="chipreal">${camSvg}FOTO REAL</div>` : '';
+  const cta = conCta ? ctaBloque(m, l) : pg;
+  const u = x => fileUrl(m, x);
+  if (l.tipo === 'anotada') {
+    const alto = l.alto || (tall ? 1120 : 780);
+    return `<div class="s luz${v}"><div class="fullfoto" style="height:${alto}px;background-image:url(${u(l.imagen)});${l.foco ? 'background-position:' + l.foco : ''}"><div style="position:absolute;inset:0">${pinsHtml(l)}</div></div>${real}
+      <div class="fhead" style="top:${alto + (tall ? 50 : 34)}px"><h1${l.fs ? ` style="--fs:${l.fs}px"` : ''}>${rich(l.titulo)}</h1>${l.texto ? `<p>${rich(l.texto)}</p>` : ''}</div>${cta}</div>`;
+  }
+  if (l.tipo === 'encuesta') {
+    const top = tall ? 400 : 250, hh = tall ? 470 : 330, gap = 24;
+    const op = (o, k) => `<div class="opcion" style="top:${top + k * (hh + gap)}px;height:${hh}px;background-image:url(${u(o.imagen)})"><div class="letra">${'AB'[k]}</div><div class="rot">${rich(o.titulo)}${o.texto ? `<small>${rich(o.texto)}</small>` : ''}</div></div>`;
+    return `<div class="s luz${v}"><div class="fhead" style="top:${tall ? 225 : 80}px"><h1 style="--fs:${l.fs || (tall ? 84 : 66)}px">${rich(l.titulo)}</h1></div>
+      ${l.opciones.map(op).join('')}<div style="position:absolute;left:0;right:0;top:${top + 2 * hh + gap + 22}px;text-align:center;font:700 ${tall ? 36 : 30}px 'Inter Tight'">${rich(l.texto || 'Responde esta historia con A o B')}</div>${cta}</div>`;
+  }
+  if (l.tipo === 'collage') {
+    const fotos = l.fotos || [];
+    const pos = tall ? [[70, 520, 560, -6], [470, 640, 540, 5], [170, 1040, 600, -2]] : [[40, 280, 560, -5], [470, 640, 540, 4], [0, 0, 0, 0]];
+    const pol = fotos.slice(0, tall ? 3 : 2).map((f, k) => { const [x, y, w, r] = pos[k]; const hh = Math.round(w * 0.72); return `<div class="polaroid" style="left:${x}px;top:${y}px;transform:rotate(${r}deg)"><div style="width:${w}px;height:${hh}px;background-image:url(${u(f.imagen)})"></div><p>${esc(f.texto || '')}</p></div>`; }).join('');
+    return `<div class="s luz${v || ' v-acento'}"><div class="fhead" style="top:${tall ? 225 : 80}px"><h1 style="--fs:${l.fs || (tall ? 90 : 72)}px">${rich(l.titulo)}</h1>${l.texto ? `<p>${rich(l.texto)}</p>` : ''}</div>${pol}${cta}</div>`;
+  }
+  if (l.tipo === 'inmersiva') {
+    const bottom = conCta ? (tall ? 470 : 230) : (tall ? 300 : 130);
+    return `<div class="s luz"><div class="fullfoto" style="bottom:0;background-image:url(${u(l.imagen)});${l.foco ? 'background-position:' + l.foco : ''}"></div>${real}
+      ${l.etiqueta ? `<div class="chipnegro" style="left:56px;top:${tall ? 230 : 72}px">${esc(l.etiqueta)}</div>` : ''}
+      <div class="bloque" style="bottom:${bottom}px"><h1${l.fs ? ` style="--fs:${l.fs}px"` : ''}>${rich(l.titulo)}</h1>${l.texto ? `<p>${rich(l.texto)}</p>` : ''}${fmt === 'carrusel' && i === 0 ? `<p style="font-weight:800;color:${m.colores.acento_texto}">Desliza →</p>` : ''}</div>${cta}</div>`;
+  }
+  if (l.tipo === 'presenta') {
+    const pj = (m.personajes || {})[l.personaje] || {}; const pose = (pj.poses || {})[l.pose] || {};
+    const arch = l.recorte || pose.recorte || pose.archivo;
+    const hpj = l.alto_personaje || (tall ? 1180 : 860);
+    const globo = `<div class="globo" style="top:${tall ? 230 : 70}px"><div class="quien">${esc((pj.nombre || '').toUpperCase())}</div><h2 style="--fs:${l.fs || (tall ? 66 : 56)}px">${rich(l.titulo)}</h2>${l.texto ? `<p style="margin-top:18px;font-size:${tall ? 38 : 32}px;color:#4A423C">${rich(l.texto)}</p>` : ''}</div>`;
+    return `<div class="s luz"><div class="fullfoto" style="bottom:0;background-image:url(${u(l.imagen)});${l.foco ? 'background-position:' + l.foco : ''}"></div>
+      <img class="presenta-pj" src="${u(arch)}" style="height:${hpj}px;${l.lado === 'izq' ? 'left:-20px' : 'right:-30px'}">${globo}${cta}</div>`;
+  }
+  return null;
+}
 // Lámina estática
 function laminaBody(m, l, i, n, H, fmt) {
+  if (['anotada', 'encuesta', 'collage', 'inmersiva', 'presenta'].includes(l.tipo)) return realBody(m, l, i, n, H, fmt);
   const pg = n > 1 ? `<div class="pg">${i + 1}/${n}</div>` : '';
   const lab = `<div class="lab">${esc(m.etiqueta)}</div>`;
   if (l.tipo === 'cta') return ctaBody(m, Object.assign({ _H: H }, l));
@@ -395,7 +461,7 @@ function personajeBody(m, e, H, anim) {
   if (pose.tipo === 'escena') {
     return { cls: '', html: `<div class="pjesc${anim === false ? '' : ' a-zoom'}" style="background-image:url(${fileUrl(m, pose.archivo)})"></div><div class="pjscrim"></div>${globo}` };
   }
-  return { cls: 'claro', html: `<div class="pj${anim === false ? '' : ' a-resp'}"><img src="${fileUrl(m, pose.archivo)}"></div>${globo}` };
+  return { cls: 'claro', html: `<div class="pj${anim === false ? '' : ' a-resp'}" style="${pose.recorte ? '-webkit-mask-image:none;mask-image:none;width:' + (H > 1500 ? 860 : 700) + 'px' : ''}"><img src="${fileUrl(m, pose.recorte || pose.archivo)}"></div>${globo}` };
 }
 
 // Escena de motion graphic (Reel)

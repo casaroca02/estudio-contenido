@@ -1,0 +1,10 @@
+{
+  "codigo": "CLF-R01",
+  "marca": "cocinas-la-flora",
+  "tipo": "reel",
+  "archivos": [
+    "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/CLF-R01/reel.mp4",
+    "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/CLF-R01/portada.jpg"
+  ],
+  "duracion_segundos": 19
+}

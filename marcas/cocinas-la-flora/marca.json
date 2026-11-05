@@ -103,12 +103,14 @@
         "olla": {
           "archivo": "assets/personajes/andres_olla.png",
           "tipo": "recorte",
-          "canva": "MAHYwtLw8Tk"
+          "canva": "MAHYwtLw8Tk",
+          "recorte": "assets/personajes/andres_olla_recorte.png"
         },
         "libreta": {
           "archivo": "assets/personajes/andres_libreta.png",
           "tipo": "recorte",
-          "canva": "MAHYwu_glCQ"
+          "canva": "MAHYwu_glCQ",
+          "recorte": "assets/personajes/andres_libreta_recorte.png"
         },
         "retrato": {
           "archivo": "assets/personajes/andres_retrato.png",
@@ -125,7 +127,8 @@
         "celular": {
           "archivo": "assets/personajes/emprendedora_celular.png",
           "tipo": "recorte",
-          "canva": "MAHYw24eH0Q"
+          "canva": "MAHYw24eH0Q",
+          "recorte": "assets/personajes/emprendedora_celular_recorte.png"
         },
         "retrato": {
           "archivo": "assets/personajes/emprendedora_retrato.png",

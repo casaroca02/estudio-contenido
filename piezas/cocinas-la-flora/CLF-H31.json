@@ -1,1 +1,36 @@
-{"marca": "cocinas-la-flora", "codigo": "CLF-H31", "tipo": "historia", "lamina": {"titulo": "Así es tu *cocina* por dentro", "texto": "100 % privada, con 2 o más puntos de gas. Nos ajustamos a tu necesidad.", "imagen": "assets/reales/modulo_cocina_puerta.jpg", "alto": 900, "foto_real": true, "sticker": "Chipichape · Norte de Cali", "fs": 100, "foco": "center 60%"}}
+{
+ "marca": "cocinas-la-flora",
+ "codigo": "CLF-H31",
+ "tipo": "historia",
+ "lamina": {
+  "tipo": "anotada",
+  "titulo": "Tu cocina, *lista* para producir",
+  "texto": "Cocina industrial privada en Chipichape. Nos ajustamos a lo que necesitas.",
+  "imagen": "assets/reales/modulo_cocina_vertical.jpg",
+  "puntos": [
+   {
+    "x": 60,
+    "y": 31,
+    "texto": "Campana extractora"
+   },
+   {
+    "x": 67,
+    "y": 47,
+    "texto": "2 o más puntos de gas",
+    "lado": "izq"
+   },
+   {
+    "x": 76,
+    "y": 57,
+    "texto": "Lavaplatos en acero",
+    "lado": "izq"
+   },
+   {
+    "x": 40,
+    "y": 80,
+    "texto": "Cocina 100 % privada"
+   }
+  ],
+  "fs": 84
+ }
+}

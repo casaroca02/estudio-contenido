@@ -1,0 +1,44 @@
+{
+ "marca": "cocinas-la-flora",
+ "codigo": "CLF-R01",
+ "tipo": "reel",
+ "escenas": [
+  {
+   "titulo": "Así es una cocina oculta *por dentro*",
+   "texto": "Fotos reales · Chipichape, norte de Cali",
+   "imagen": "assets/reales/modulo_entrada_vertical.jpg",
+   "segundos": 3.0,
+   "fs": 80
+  },
+  {
+   "titulo": "Campana *extractora*",
+   "imagen": "assets/reales/linea_caliente_campana.jpg",
+   "segundos": 2.2
+  },
+  {
+   "titulo": "2 o más puntos de gas",
+   "texto": "Nos ajustamos a tu necesidad",
+   "imagen": "assets/reales/modulo_cocina_frente.jpg",
+   "segundos": 2.3
+  },
+  {
+   "titulo": "Lavaplatos en *acero*",
+   "imagen": "assets/reales/modulo_cocina_vertical.jpg",
+   "segundos": 2.3
+  },
+  {
+   "modo": "personaje",
+   "personaje": "andres",
+   "pose": "libreta",
+   "titulo": "Desde *$1,3 M* al mes",
+   "texto": "Solo el espacio · arranque rápido, poco papeleo",
+   "segundos": 5.8
+  }
+ ],
+ "subtitulos": {
+  "texto": "Mira por dentro una cocina oculta en Chipichape. Campana extractora, dos o más puntos de gas y lavaplatos en acero. Nos ajustamos a lo que necesitas, desde un millón trescientos mil al mes. Escríbenos COCINA y agenda tu visita.",
+  "inicio": 0.3,
+  "duracion": 16.5
+ },
+ "cta_segundos": 3.4
+}

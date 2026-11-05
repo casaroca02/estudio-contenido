@@ -1,1 +1,78 @@
-{"marca": "cocinas-la-flora", "codigo": "CLF-C06", "tipo": "carrusel", "laminas": [{"titulo": "Entra a tu *cocina* privada", "texto": "Un recorrido con fotos reales, sin montajes.", "imagen": "assets/reales/modulo_cocina_puerta.jpg", "alto": 760, "foto_real": true, "variante": "oscuro", "fs": 84, "foco": "center 60%"}, {"titulo": "Línea *caliente* y despacho", "galeria": ["assets/reales/linea_caliente_campana.jpg", "assets/reales/linea_caliente_despacho.jpg"], "alto": 440, "foto_real": true, "fs": 80, "lista": ["Baño María y plancha", "Freidora industrial", "Zona de empaque y despacho"]}, {"titulo": "Frío *industrial*", "texto": null, "galeria": ["assets/reales/cuarto_frio.jpg", "assets/reales/modulo_vacio_equipado.jpg"], "alto": 440, "foto_real": true, "variante": "salvia", "fs": 80, "lista": ["Neveras verticales de acero", "Mesones en acero", "Vitrina refrigerada"]}, {"tipo": "claro", "titulo": "Qué *incluye*", "texto": "Cocina 100 % privada, sin zonas compartidas. 2 o más puntos de gas, agua y electricidad: nos ajustamos a tu necesidad."}, {"tipo": "pasos", "titulo": "Cómo *empezar*", "items": ["Escríbenos COCINA|WhatsApp 320 770 9238", "Agenda tu visita|Conoce las cocinas en Chipichape", "Elige tu modalidad|Solo espacio, con equipos u opción de compra", "Empieza a producir|Contrato desde 6 meses"]}]}
+{
+ "marca": "cocinas-la-flora",
+ "codigo": "CLF-C06",
+ "tipo": "carrusel",
+ "laminas": [
+  {
+   "tipo": "inmersiva",
+   "titulo": "Tu cocina privada en *Chipichape*",
+   "texto": "Un recorrido con fotos reales.",
+   "imagen": "assets/reales/modulo_cocina_puerta.jpg",
+   "etiqueta": "NORTE DE CALI"
+  },
+  {
+   "tipo": "anotada",
+   "titulo": "Así es un *módulo* por dentro",
+   "imagen": "assets/reales/modulo_cocina_frente.jpg",
+   "alto": 940,
+   "puntos": [
+    {
+     "x": 55,
+     "y": 34,
+     "texto": "Campana extractora"
+    },
+    {
+     "x": 63,
+     "y": 57,
+     "texto": "2 o más puntos de gas"
+    },
+    {
+     "x": 77,
+     "y": 70,
+     "texto": "Lavaplatos en acero",
+     "lado": "izq"
+    },
+    {
+     "x": 42,
+     "y": 86,
+     "texto": "Cocina 100 % privada"
+    }
+   ],
+   "fs": 68,
+   "texto": "Foto real en Chipichape. Nos ajustamos a lo que necesitas."
+  },
+  {
+   "tipo": "presenta",
+   "personaje": "andres",
+   "pose": "libreta",
+   "titulo": "¿Cuánto *cuesta*?",
+   "texto": "Desde $1,3 M al mes, solo el espacio. Servicios cerca de $350.000.",
+   "imagen": "assets/reales/linea_caliente_campana.jpg",
+   "alto_personaje": 820
+  },
+  {
+   "titulo": "Arrienda a tu *medida*",
+   "imagen": "assets/reales/linea_caliente_despacho.jpg",
+   "alto": 520,
+   "foto_real": true,
+   "variante": "oscuro",
+   "lista": [
+    "Solo el espacio|Traes tus propios equipos",
+    "Espacio con equipos|Lista para operar desde el primer día",
+    "Con opción de compra|Al final del plazo, los equipos son tuyos"
+   ],
+   "fs": 70
+  },
+  {
+   "tipo": "pasos",
+   "titulo": "Cómo *empezar*",
+   "items": [
+    "Escríbenos COCINA|WhatsApp 320 770 9238",
+    "Agenda tu visita|Conoce las cocinas en Chipichape",
+    "Elige tu modalidad|Nos ajustamos a lo que necesitas",
+    "Empieza a producir|Contrato desde 6 meses, poco papeleo"
+   ],
+   "fondo": "claro"
+  }
+ ]
+}

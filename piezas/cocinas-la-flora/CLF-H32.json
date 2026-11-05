@@ -1,1 +1,14 @@
-{"marca": "cocinas-la-flora", "codigo": "CLF-H32", "tipo": "historia", "lamina": {"titulo": "Arrienda a tu *medida*", "imagen": "assets/reales/modulo_cocina_frente.jpg", "alto": 720, "foto_real": true, "variante": "oscuro", "lista": ["Solo el espacio|Traes tus propios equipos", "Espacio con equipos|Lista para operar desde el primer día", "Con opción de compra|Al final del plazo, los equipos son tuyos"], "fs": 84, "foco": "center 55%"}}
+{
+ "marca": "cocinas-la-flora",
+ "codigo": "CLF-H32",
+ "tipo": "historia",
+ "lamina": {
+  "tipo": "presenta",
+  "personaje": "andres",
+  "pose": "olla",
+  "titulo": "Esta puede ser *tu cocina*",
+  "texto": "Nos ajustamos a lo que necesitas: 2 o más puntos de gas, con o sin equipos.",
+  "imagen": "assets/reales/modulo_cocina_vertical.jpg",
+  "foco": "center 40%"
+ }
+}
