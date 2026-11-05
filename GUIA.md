@@ -33,7 +33,7 @@ Busca la imagen en este orden:
 
 1. **Material propio** del Banco de material en Notion y `marcas/<marca>/assets/`: fotos y videos reales de las cocinas.
 2. **Personajes de la marca** (`personajes` en marca.json, modo o lámina `personaje`): para explicar, preguntar u objetar.
-3. **Galerías de stock libres de regalías:** `orshot_search_stock_media` con `orientation: "vertical"` y 1 a 3 palabras en inglés (`dessert`, `burger`, `home kitchen cooking`, `food delivery`). Mira las miniaturas y elige la foto que muestre el tema con más claridad, luz cálida y espacio libre para el texto. Luego `orshot_use_stock_media` con su `ref` te da una URL permanente. Es gratis, de uso comercial y no exige atribución. Para video de stock: `vidiq_generate_broll` (1 crédito; la atribución al autor va en el caption).
+3. **Galerías de stock libres de regalías:** `orshot_search_stock_media` con `orientation: "vertical"` y 1 a 3 palabras en inglés (`dessert`, `burger`, `home kitchen cooking`, `food delivery`). Mira las miniaturas y elige la foto que muestre el tema con más claridad, luz cálida y espacio libre para el texto. Luego `orshot_use_stock_media` con su `ref` te da una URL permanente. Es gratis, de uso comercial y no exige atribución. Para video de stock: `vidiq_generate_broll` (1 crédito; la atribución al autor va en el caption). Antes de buscar, revisa si ya hay fotos del tema en `marcas/<marca>/assets/stock/`.
 4. **Infografía o motion graphic** del kit cuando el mensaje es una cifra, una comparación o un proceso.
 
 Nunca uses fotos o videos de otras cuentas de redes. Nunca uses una foto de stock que muestre un local con marca, un logo ajeno o una persona presentada como cliente.
@@ -60,7 +60,7 @@ Nunca uses fotos o videos de otras cuentas de redes. Nunca uses una foto de stoc
 | Carrusel | Martes y jueves | Portada (lámina `foto` con material propio o `personaje`) → problema → dato o barras → vs → pasos → cierre. Entre 5 y 7 láminas. |
 | Post | Ocasional | Lámina `foto` o `personaje` con el mensaje central. |
 
-**Limitación técnica:** el entorno de producción no puede descargar fotos de stock. Por eso las fotos de stock solo se usan en piezas de video (Reels e historias en video) montadas con `vidiq_compose`. Los estáticos usan material propio, personajes o infografías.
+**Fotos de stock en piezas estáticas:** escribe las URLs en la cola (`cola/<código>.txt`, ver README, «Traer imágenes»), haz push y espera a que lleguen al repositorio (alrededor de 1 minuto). Luego úsalas en la lámina `foto` o como `imagen` en cualquier formato. Las fotos quedan guardadas en `marcas/<marca>/assets/stock/<tema>/` para reutilizarlas, sin repetir la misma foto dos días seguidos.
 
 ## 6. Personajes
 

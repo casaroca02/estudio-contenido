@@ -1,0 +1,10 @@
+{
+  "codigo": "DEMO-P01",
+  "marca": "cocinas-la-flora",
+  "tipo": "reel",
+  "archivos": [
+    "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-P01/reel.mp4",
+    "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-P01/portada.jpg"
+  ],
+  "duracion_segundos": 17.7
+}

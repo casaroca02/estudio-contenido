@@ -56,7 +56,7 @@ Escena de motion graphic: lleva `modo` (y `segundos`, por defecto 4):
 
 ### Capas para fotos o videos de stock (tipo `capas`)
 
-El entorno de producción no descarga fotos de stock. Por eso el kit genera solo las tarjetas de texto transparentes, y vidIQ las monta sobre las fotos:
+Para Reels con fotos de stock sin pasar por la cola, el kit genera solo las tarjetas de texto transparentes y vidIQ las monta sobre las fotos:
 
 ```json
 {"tipo":"capas","escenas":[{"titulo":"¿Vendes postres desde *casa*?","fuente":"<URL permanente de orshot_use_stock_media>","segundos":3.5}, …]}
@@ -82,6 +82,17 @@ Probado el 4 nov con tres fotos de Pixabay, la voz de AD-berto y música.
 5. Diálogo con dos voces (la emprendedora pregunta y Chef Andrés responde):
    - Primer `vidiq_compose`: el video de la escena 1 con la voz A.
    - Segundo `vidiq_compose`: escena 1 = ese resultado con `keepNativeAudio: true`; escena 2 = el resto del video; `voiceover` = la voz B con `startAtSeconds` = duración de la escena 1; más la música.
+
+## Traer imágenes (cola)
+
+El entorno de producción solo alcanza GitHub. Para usar fotos de stock o imágenes exportadas de Canva en piezas estáticas, existe un flujo de GitHub Actions (`.github/workflows/traer-imagenes.yml`), autorizado por Carlos el 4 nov 2026:
+
+1. Crea `cola/<código>.txt` con una línea por imagen: `<url> <destino>`. El destino va dentro de `marcas/`, por ejemplo `marcas/cocinas-la-flora/assets/stock/postres/pixabay-4059154.jpg`. Las terminadas en `.png` conservan la transparencia.
+2. Orígenes permitidos: `storage.orshot.com` (URL de `orshot_use_stock_media`), Canva (`export-download.canva.com`), Pixabay, Unsplash y Pexels.
+3. Haz commit y push. En alrededor de 1 minuto el flujo descarga, optimiza a un máximo de 1600 px, guarda en el repositorio y borra la línea de la cola.
+4. Haz `git pull` cada 10 s, hasta 3 minutos, hasta que el archivo exista; luego renderiza.
+
+Personajes oficiales ya descargados: `marcas/cocinas-la-flora/assets/personajes/` (andres_olla, andres_libreta, andres_retrato, emprendedora_celular, emprendedora_retrato, juntos_cocina). Si se crean poses nuevas en Canva: diseño de trabajo DAHaA7a4k44, insertar el asset en una página, exportar PNG y ponerlo en la cola.
 
 ## Reglas
 
