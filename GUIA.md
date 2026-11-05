@@ -27,6 +27,8 @@ Reparte la semana así: unas 4 piezas de atraer, 3 de conectar y 2 de convertir.
 
 ## 3. La imagen tiene que decir lo mismo que el texto
 
+**Solo cocinas industriales.** Cocinas La Flora arrienda cocinas industriales para restaurantes y emprendedores. Nunca uses fotos de cocinas de casa o residenciales (alacenas de madera, islas de mármol, electrodomésticos domésticos), ni siquiera cuando el tema es «cocinas en casa». Si se muestra una cocina, debe ser profesional: acero inoxidable, campanas industriales, fogones y ollas de restaurante. Cuando el tema es la casa, muestra la comida o la cocina industrial, que es la solución.
+
 Regla de oro: si la pieza habla de postres, se ven postres. Si habla de hamburguesas, se ve una hamburguesa. Si habla de costos, se ve a Chef Andrés con la libreta o una infografía. Si habla de la cocina, se ven fotos reales de la cocina.
 
 Busca la imagen en este orden:
@@ -38,12 +40,19 @@ Busca la imagen en este orden:
 
 Nunca uses fotos o videos de otras cuentas de redes. Nunca uses una foto de stock que muestre un local con marca, un logo ajeno o una persona presentada como cliente.
 
-## 4. Diseño limpio: la foto manda
+## 4. Diseño v2 «foodie vibrante» (aprobado por Carlos el 5 nov 2026)
 
+Carlos rechazó el diseño anterior por plano, oscuro, cargado y difuso, con fotos poco apetitosas y el CTA a 3/4 de la página. Ahora es obligatorio:
+
+- **Claro y luminoso.** Fondo crema claro (`luz`). Nunca oscurezcas las fotos ni pongas velos negros encima.
+- **Fotos nítidas y apetitosas.** Usa fotos de alta resolución (mínimo 1200 px de ancho), bien iluminadas y con color. No uses en portadas las fotos oscuras del banco (`imagenes_oscuras_no_usar_en_portada` en marca.json) ni fotos de baja resolución que se vean borrosas.
+- **Historia y post:** la lámina por defecto (sin `tipo`) ya aplica este diseño: foto arriba con esquinas redondeadas, sticker amarillo, titular grande en Archivo negra sobre fondo claro, la palabra clave resaltada con marcador amarillo y el CTA **abajo**, en un bloque tomate con letra de palo grande: «Escríbenos COCINA · WhatsApp 320 770 9238». No repitas el CTA dentro de `texto`.
+- **Protagonista por tema:** comida cuando se habla de producto o pedidos; cocina industrial cuando se habla del espacio; Chef Andrés cuando se habla de cifras o costos.
+- **Carrusel:** la portada usa el mismo diseño (sin CTA, con «Desliza →»); las láminas de texto alternan fondos claros (crema, salvia y durazno) y el cierre es claro, con beneficios y el CTA abajo.
 - **Una idea por pieza o por lámina.**
 - El titular lleva máximo 7 palabras y 2 líneas, más 1 línea de apoyo si hace falta. Si necesitas más texto, divídelo en otra lámina o llévalo al caption.
-- Cuando hay foto, usa la tarjeta limpia: lámina `foto` en estáticos o tipo `capas` en video. La foto ocupa todo el fondo y el texto va en una tarjeta crema pequeña abajo. No oscurezcas la foto completa.
-- Una sola palabra en serif itálica por titular. Sin emojis en los titulares.
+- En video con foto de stock, usa el tipo `capas`: la foto ocupa todo el fondo y el texto va en una tarjeta blanca. En Reels con foto, la tarjeta va arriba para no chocar con los subtítulos.
+- Una sola palabra resaltada por titular (`*palabra*` = marcador amarillo). Sin serif itálica en los titulares: debe leerse de un vistazo. Sin emojis en los titulares.
 - Deja aire: es preferible un titular más corto a uno más pequeño.
 - El texto importante va entre los 230 y los 1580 px de alto de un 9:16.
 - Varía el tipo de lámina: no hagas dos láminas seguidas con el mismo diseño.
@@ -80,8 +89,8 @@ Nunca uses fotos o videos de otras cuentas de redes. Nunca uses una foto de stoc
 ## 8. Lista de control antes de producir
 
 1. ¿A quién le habla y qué debe hacer después de verla?
-2. ¿La imagen muestra exactamente el tema?
+2. ¿La imagen muestra exactamente el tema, es nítida y luminosa, y si aparece una cocina, es industrial?
 3. ¿El titular tiene 7 palabras o menos y una sola idea?
 4. ¿Las cifras y condiciones son las oficiales de Notion?
-5. ¿Tiene el CTA, el código y la etiqueta IA si aplica?
+5. ¿Tiene el CTA abajo y legible, el código y la etiqueta IA si aplica?
 6. ¿Es distinta de las últimas 10 piezas en gancho, formato y foto?

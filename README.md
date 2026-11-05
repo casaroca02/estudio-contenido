@@ -18,7 +18,7 @@ Ejemplos que funcionan: `piezas/_demos/DEMO-C01.json` (carrusel infográfico) y 
 
 ## Formatos de pieza
 
-Texto con `*palabra*` = palabra de acento (serif itálica). `\n` = salto de línea. `fondo`: `claro`, `oscuro` o `acento`.
+Texto con `*palabra*` = palabra resaltada con marcador amarillo (diseño v2). `\n` = salto de línea. `fondo`: `claro`, `oscuro` o `acento`.
 
 ### Carrusel (1080 × 1350), post (1080 × 1350) e historia (1080 × 1920)
 
@@ -26,7 +26,7 @@ Carrusel: `{"tipo":"carrusel","laminas":[…]}` (se agrega solo la lámina final
 
 | Tipo de lámina | Campos | Uso |
 |---|---|---|
-| sin `tipo` (portada) | `titulo`, `texto`, `imagen` | Foto de fondo con titular |
+| sin `tipo` (portada, diseño v2) | `titulo`, `texto`, `imagen`, `sticker`, `sticker2`, `foco`, `fs`, `cta:false` | Foto nítida arriba, titular grande en fondo claro y CTA abajo (historia y post). En carrusel no lleva CTA y muestra «Desliza →». |
 | `dato` | `dato`, `titulo`, `texto` | Una cifra grande |
 | `claro` | `titulo`, `texto` | Idea en texto |
 | `barras` | `titulo`, `items:[{label, valor, texto_valor, destacado}]`, `nota` | Comparación de cifras |
