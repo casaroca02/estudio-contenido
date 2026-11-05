@@ -671,7 +671,7 @@ async function main() {
     const out = path.join(outDir, 'reel.mp4');
     // Música: ruta local o nombre de una pista de audio.musica_libre (marca.json). Se repite su tramo de loop
     // hasta cubrir el video, con fundido de entrada y salida. Gratis: no usa créditos de ninguna app.
-    const lib = ((m.audio || {}).musica_libre || []).find(x => x.nombre === spec.musica);
+    const lib = [...((m.audio || {}).musica_real || []), ...((m.audio || {}).musica_libre || [])].find(x => x.nombre === spec.musica);
     const music = lib ? path.join(ROOT, 'marcas', m.slug, lib.archivo) : spec.musica ? path.join(ROOT, spec.musica) : null;
     if (music && fs.existsSync(music)) {
       const dur = +execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', video]).toString().trim();
