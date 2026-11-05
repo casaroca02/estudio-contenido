@@ -1,5 +1,7 @@
 # Estudio de contenido
 
+**Antes de producir, lee `GUIA.md`**: objetivo de cada pieza, imagen relevante, diseño limpio, personajes y voces.
+
 Kit gratuito para producir piezas de redes sociales (carruseles, historias, posts y Reels con motion graphics) con la identidad de cada marca, y alojarlas en un enlace público que Metricool pueda tomar.
 
 ## Cómo funciona
@@ -32,6 +34,8 @@ Carrusel: `{"tipo":"carrusel","laminas":[…]}` (se agrega solo la lámina final
 | `pasos` | `titulo`, `items:["Paso|detalle", …]`, `nota` | Cómo funciona, proceso |
 | `checklist` | `titulo`, `items[]`, `nota` | Qué incluye, requisitos |
 | `cita` | `texto`, `autor` | Solo testimonios reales y autorizados |
+| `foto` | `titulo` (máx. 7 palabras), `texto`, `imagen`, `etiqueta` | Diseño limpio: foto a sangre y tarjeta crema pequeña abajo |
+| `personaje` | `personaje`, `pose`, `titulo`, `texto` | Chef Andrés o la emprendedora con globo de diálogo (poses en `marca.json` → `personajes`) |
 
 ### Reel (1080 × 1920)
 
@@ -48,6 +52,22 @@ Escena de motion graphic: lleva `modo` (y `segundos`, por defecto 4):
 | `barras` | igual que la lámina; cada item con `valor`, `prefijo`, `sufijo` | Barras que crecen con cifras que cuentan |
 | `vs`, `pasos`, `checklist`, `cita` | igual que la lámina | Entradas animadas en secuencia |
 | `llama` | `titulo`, `texto` | La mascota de la marca habla en un globo |
+| `personaje` | `personaje`, `pose`, `titulo`, `texto` | Personaje que respira, con globo y ondas de voz |
+
+### Capas para fotos o videos de stock (tipo `capas`)
+
+El entorno de producción no descarga fotos de stock. Por eso el kit genera solo las tarjetas de texto transparentes, y vidIQ las monta sobre las fotos:
+
+```json
+{"tipo":"capas","escenas":[{"titulo":"¿Vendes postres desde *casa*?","fuente":"<URL permanente de orshot_use_stock_media>","segundos":3.5}, …]}
+```
+
+El manifest devuelve `escenas` (fuente, capa y segundos) y `duracion_segundos`. En `vidiq_compose`:
+- `scenes`: cada escena es `{"type":"image","source":fuente,"duration":segundos,"kenBurns":…}`, con transición `fade` de 0,4 s desde la segunda; la última es `cierre.jpg`.
+- `overlays`: cada capa es `{"kind":"image","src":capa,"start":<inicio de su escena + 0,3>,"duration":<segundos − 0,3>,"position":{"x":0,"y":0,"width":1,"height":1}}`.
+- Se agregan `voiceover` y `music` como en la postproducción de audio. Para una historia en video: 1 o 2 escenas de 5 a 6 s, sin voz.
+
+Probado el 4 nov con tres fotos de Pixabay, la voz de AD-berto y música.
 
 `subtitulos` (para Reels con voz en off): `{"texto": "<guion exacto de la voz>", "inicio": 0.3, "duracion": <segundos de la voz>}`. Quedan quemados en el video, a salvo de la interfaz de Instagram.
 
@@ -59,6 +79,9 @@ Escena de motion graphic: lleva `modo` (y `segundos`, por defecto 4):
 2. Render del kit con `subtitulos` = el guion exacto y la duración real de la voz.
 3. `vidiq_compose`: `format: "vertical"`, una escena `video` con la URL raw del `reel.mp4` y `duration` = `duracion_segundos` del manifest; `voiceover.audioUrl` = URL de la voz (`startAtSeconds` 0.3); `music.audioUrl` = una pista de `audio.musica` con los valores de `audio.mezcla`.
 4. La URL que devuelve vidIQ caduca en 12 horas: se programa en Metricool en la misma corrida (Metricool la copia a su servidor).
+5. Diálogo con dos voces (la emprendedora pregunta y Chef Andrés responde):
+   - Primer `vidiq_compose`: el video de la escena 1 con la voz A.
+   - Segundo `vidiq_compose`: escena 1 = ese resultado con `keepNativeAudio: true`; escena 2 = el resto del video; `voiceover` = la voz B con `startAtSeconds` = duración de la escena 1; más la música.
 
 ## Reglas
 
