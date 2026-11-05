@@ -467,14 +467,14 @@ function personajeBody(m, e, H, anim) {
 // Escena de motion graphic (Reel)
 function motionBody(m, e, H) {
   const lab = `<div class="lab a-fade" style="animation-delay:0s">${esc(m.etiqueta)}</div>`;
-  const bgImg = e.imagen ? `<div class="bg a-zoom" style="background-image:url(${fileUrl(m, e.imagen)})"></div><div class="scrim2" style="background:rgba(255,249,241,.82)"></div>` : '';
+  const bgImg = e.imagen && e.modo !== 'foto' ? `<div class="bg a-zoom" style="background-image:url(${fileUrl(m, e.imagen)})"></div><div class="scrim2" style="background:rgba(255,249,241,.82)"></div>` : '';
   const glow = `<div class="glow a-glow"></div>`;
   const def = 'claro';
-  const cls = e.imagen ? 'claro' : fondoClase(e, def);
+  const cls = e.imagen && e.modo !== 'foto' ? 'claro' : fondoClase(e, def);
   let inner;
   if (e.modo === 'kinetic') {
     const k = kineticWords(e.titulo, 0.2, 0.16);
-    inner = `<div class="top" style="top:${H > 1500 ? 520 : 300}px"><h1 style="--fs:${e.fs || 130}px">${k.html}</h1>
+    inner = `<div class="top" style="top:${e.top || (H > 1500 ? 520 : 300)}px"><h1 style="--fs:${e.fs || 130}px">${k.html}</h1>
       ${e.texto ? `<div style="height:50px"></div><p class="a-up" style="animation-delay:${(k.end + 0.2).toFixed(2)}s;color:${cls ? 'inherit' : m.colores.resalte};font-weight:700">${rich(e.texto)}</p>` : ''}</div>`;
   } else if (e.modo === 'contador') {
     const txt = `${e.prefijo || ''}${e.valor}${e.sufijo || ''}`;
@@ -483,6 +483,17 @@ function motionBody(m, e, H) {
       <div class="big a-pop" style="animation-delay:.3s;font-size:${e.fs || 250}px">${cnt(0, e, txt, 0.3)}</div>
       <div style="height:40px"></div><h2 class="a-up" style="animation-delay:1.4s">${rich(e.titulo || '')}</h2>
       ${e.texto ? `<div style="height:30px"></div><p class="a-up" style="animation-delay:1.8s">${rich(e.texto)}</p>` : ''}</div>`;
+  } else if (e.modo === 'foto') {
+    // Foto real luminosa en tarjeta, con zoom suave y puntos que aparecen en secuencia (motion graphic, 5 nov)
+    const k = kineticWords(e.titulo, 0.1, 0.12);
+    const ft = e.foto_top || 600, fh = e.foto_alto || 940;
+    const pins = (e.puntos || []).map((p, j) => `<div class="pin${p.lado === 'izq' ? ' izq' : ''}" style="left:${p.x}%;top:${p.y}%"><b class="a-pop" style="animation-delay:${(1.1 + j * 0.55).toFixed(2)}s">${j + 1}</b><span class="a-fade" style="animation-delay:${(1.3 + j * 0.55).toFixed(2)}s">${esc(p.texto)}</span></div>`).join('');
+    inner = `<div class="top" style="top:${H > 1500 ? 300 : 120}px"><h1 style="--fs:${e.fs || 96}px">${k.html}</h1></div>
+      <div class="a-up" style="animation-delay:.25s;position:absolute;left:60px;right:60px;top:${ft}px;height:${fh}px;border-radius:44px;overflow:hidden;box-shadow:0 30px 70px rgba(15,13,12,.25)">
+        <div class="a-zoom" style="position:absolute;inset:0;background:url(${fileUrl(m, e.imagen)}) center/cover;${e.foco ? 'background-position:' + e.foco + ';' : ''}filter:brightness(1.1) contrast(1.06) saturate(1.15)"></div>
+        <div style="position:absolute;inset:0">${pins}</div>
+        <div class="chipreal a-fade" style="animation-delay:.6s;top:28px;right:28px">${camSvg}FOTO REAL</div></div>
+      ${e.texto ? `<p class="a-up" style="position:absolute;left:84px;right:84px;top:${ft + fh + 50}px;animation-delay:${(1.2 + (e.puntos || []).length * 0.55).toFixed(2)}s;font:700 44px/1.25 'Inter Tight'">${rich(e.texto)}</p>` : ''}`;
   } else if (e.modo === 'personaje') {
     const r = personajeBody(m, e, H, 0);
     return `<div class="s ${r.cls}">${r.html}<div class="lab a-fade" style="animation-delay:0s">${esc(m.etiqueta)}</div></div>`;
@@ -494,7 +505,9 @@ function motionBody(m, e, H) {
     inner = infoBody(m, e, H, 0.1);
     if (!inner) throw new Error('modo de escena desconocido: ' + e.modo);
   }
-  return `<div class="s ${cls}">${bgImg}${glow}${lab}${inner}</div>`;
+  // Foto real pequeña y luminosa debajo del contenido (llena el espacio inferior en motion graphics)
+  const mini = e.mini ? `<div class="a-up" style="animation-delay:${e.mini_delay || 0.9}s;position:absolute;left:60px;right:60px;top:${e.mini_top || 1100}px;height:${e.mini_alto || 560}px;border-radius:40px;overflow:hidden;box-shadow:0 26px 60px rgba(15,13,12,.22)"><div class="a-zoom" style="position:absolute;inset:0;background:url(${fileUrl(m, e.mini)}) center/cover;filter:brightness(1.1) contrast(1.06) saturate(1.15)"></div><div class="chipreal" style="top:24px;right:24px">${camSvg}FOTO REAL</div></div>` : '';
+  return `<div class="s ${cls}">${bgImg}${glow}${lab}${inner}${mini}</div>`;
 }
 
 // Script de control de tiempo: seek(t) fija cada animación y cada contador en el segundo t

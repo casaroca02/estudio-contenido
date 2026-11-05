@@ -58,6 +58,9 @@ Escena de motion graphic: lleva `modo` (y `segundos`, por defecto 4):
 | `vs`, `pasos`, `checklist`, `cita` | igual que la lámina | Entradas animadas en secuencia |
 | `llama` | `titulo`, `texto` | La mascota de la marca habla en un globo |
 | `personaje` | `personaje`, `pose`, `titulo`, `texto` | Personaje que respira, con globo y ondas de voz |
+| `foto` | `titulo`, `imagen`, `puntos:[{x,y,texto,lado}]`, `texto`, `foto_top`, `foto_alto`, `foco` | Foto real aclarada en tarjeta redondeada, con zoom suave y puntos que aparecen uno a uno |
+
+Cualquier escena de motion graphic acepta `mini` (foto real pequeña y luminosa en la parte baja), con `mini_top`, `mini_alto` y `mini_delay`, y `kinetic` acepta `top` para centrar el gancho.
 
 ### Capas para fotos o videos de stock (tipo `capas`)
 
@@ -80,7 +83,7 @@ Probado el 4 nov con tres fotos de Pixabay, la voz de AD-berto y música.
 
 ## Postproducción de audio (voz + música)
 
-1. Voz en off: ElevenLabs `creative_generate_speech` (modelo `eleven_v4`, 1 toma) con la voz de `audio.voces` que indique `audio.voces.regla` (masculina = mentor; femenina = historia del emprendedor), y la `direccion` al inicio del guion. La URL `content_url` sirve directo en `vidiq_compose` (caduca en unas 2 horas: mezclar enseguida). Si ElevenLabs está ocupado, reintentar 1 vez a los 2 minutos; si sigue, `vidiq_voiceover_generate` con `respaldo_vidiq` (masculina: Eric `cjVigY5qzO86Huf0OWal`; femenina: Sarah `EXAVITQu4vr4xnSDxMaL`). **5 nov 2026:** ElevenLabs desactivó el plan gratuito de la cuenta («actividad inusual»); mientras Carlos no lo resuelva, ve directo a vidIQ. Ojo con el costo: vidIQ cobra 28 créditos por cada 1.000 caracteres o fracción (un guion corto cuesta 28), así que un Reel con voz cuesta unos 33 créditos con la mezcla. Si quedan menos de 48 créditos, haz el Reel sin voz (subtítulos + música). Guion de 25–35 palabras para un Reel de 14–18 s.
+1. Voz en off: ElevenLabs `creative_generate_speech` (modelo `eleven_v4`, 1 toma) con la voz de `audio.voces` que indique `audio.voces.regla` (masculina = mentor; femenina = historia del emprendedor), y la `direccion` al inicio del guion. La URL `content_url` sirve directo en `vidiq_compose` (caduca en unas 2 horas: mezclar enseguida). Si ElevenLabs falla, **no uses vidIQ ni otra app para la voz** (Carlos, 5 nov 2026): haz el Reel sin voz o déjalo pendiente y reintenta ElevenLabs en la siguiente corrida. El 5 nov ElevenLabs desactivó el plan gratuito de la cuenta («actividad inusual»). Guion de 25–35 palabras para un Reel de 14–18 s.
 2. Render del kit con `subtitulos` = el guion exacto y la duración real de la voz.
 3. `vidiq_compose`: `format: "vertical"`, una escena `video` con la URL raw del `reel.mp4` y `duration` = `duracion_segundos` del manifest; `voiceover.audioUrl` = URL de la voz (`startAtSeconds` 0.3); `music.audioUrl` = una pista de `audio.musica` con los valores de `audio.mezcla`.
 4. La URL que devuelve vidIQ caduca en 12 horas: se programa en Metricool en la misma corrida (Metricool la copia a su servidor).

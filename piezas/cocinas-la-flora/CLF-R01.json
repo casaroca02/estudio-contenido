@@ -4,41 +4,88 @@
  "tipo": "reel",
  "escenas": [
   {
-   "titulo": "Así es una cocina oculta *por dentro*",
-   "texto": "Fotos reales · Chipichape, norte de Cali",
-   "imagen": "assets/reales/modulo_entrada_vertical.jpg",
-   "segundos": 3.0,
-   "fs": 80
+   "modo": "kinetic",
+   "titulo": "¿Tu cocina de casa *ya no da*?",
+   "texto": "Hay otra forma de producir",
+   "segundos": 3.2,
+   "fs": 150,
+   "fondo": "acento",
+   "top": 640
   },
   {
-   "titulo": "Campana *extractora*",
-   "imagen": "assets/reales/linea_caliente_campana.jpg",
-   "segundos": 2.2
-  },
-  {
-   "titulo": "2 o más puntos de gas",
-   "texto": "Nos ajustamos a tu necesidad",
+   "modo": "foto",
+   "titulo": "Tu cocina *privada*",
    "imagen": "assets/reales/modulo_cocina_frente.jpg",
-   "segundos": 2.3
+   "puntos": [
+    {
+     "x": 55.6,
+     "y": 34,
+     "texto": "Campana extractora"
+    },
+    {
+     "x": 64.6,
+     "y": 57,
+     "texto": "2 o más puntos de gas",
+     "lado": "izq"
+    },
+    {
+     "x": 80.4,
+     "y": 70,
+     "texto": "Lavaplatos en acero",
+     "lado": "izq"
+    },
+    {
+     "x": 41,
+     "y": 86,
+     "texto": "Cocina 100 % privada"
+    }
+   ],
+   "texto": "Fotos reales en Chipichape, norte de Cali.",
+   "segundos": 5
   },
   {
-   "titulo": "Lavaplatos en *acero*",
+   "modo": "foto",
+   "titulo": "Lista para *producir*",
    "imagen": "assets/reales/modulo_cocina_vertical.jpg",
-   "segundos": 2.3
+   "texto": "Nos ajustamos a tu necesidad: con o sin equipos.",
+   "segundos": 3.2
+  },
+  {
+   "modo": "contador",
+   "antes": "Tu cocina desde",
+   "valor": 1.3,
+   "prefijo": "$",
+   "sufijo": " M",
+   "titulo": "al mes · solo el *espacio*",
+   "texto": "Servicios cerca de $350.000",
+   "segundos": 3.6,
+   "mini": "assets/reales/modulo_cocina_puerta.jpg",
+   "mini_top": 1080,
+   "mini_alto": 600,
+   "mini_delay": 1.6
+  },
+  {
+   "modo": "pasos",
+   "titulo": "Arranque *rápido*",
+   "items": [
+    "Escríbenos COCINA|WhatsApp 320 770 9238",
+    "Visita tu cocina|En La Flora, Chipichape",
+    "Empieza a producir|Contrato desde 6 meses, poco papeleo"
+   ],
+   "segundos": 3.6,
+   "mini": "assets/reales/modulo_entrada_vertical.jpg",
+   "mini_top": 1270,
+   "mini_alto": 470,
+   "mini_delay": 1.8
   },
   {
    "modo": "personaje",
    "personaje": "andres",
    "pose": "libreta",
-   "titulo": "Desde *$1,3 M* al mes",
-   "texto": "Solo el espacio · arranque rápido, poco papeleo",
-   "segundos": 5.8
+   "titulo": "Escríbenos y agenda *tu visita*",
+   "texto": "Cocina oculta, apoyo visible",
+   "segundos": 3.2
   }
  ],
- "subtitulos": {
-  "texto": "Mira por dentro una cocina oculta en Chipichape. Campana extractora, dos o más puntos de gas y lavaplatos en acero. Nos ajustamos a lo que necesitas, desde un millón trescientos mil al mes. Escríbenos COCINA y agenda tu visita.",
-  "inicio": 0.3,
-  "duracion": 16.5
- },
  "cta_segundos": 3.4
 }

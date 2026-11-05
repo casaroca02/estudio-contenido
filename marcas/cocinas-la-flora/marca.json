@@ -83,18 +83,11 @@
           "nombre": "ALE ALEJANDRO · hombre, amigo conversacional"
         }
       ],
-      "respaldo_vidiq": {
-        "voice_id": "cjVigY5qzO86Huf0OWal",
-        "nombre": "Eric (masculina, para Chef Andrés, solo si ElevenLabs falla)",
-        "femenina": {
-          "voice_id": "EXAVITQu4vr4xnSDxMaL",
-          "nombre": "Sarah"
-        }
-      },
       "modelo": "eleven_v4",
       "direccion": "Empieza el guion con la etiqueta [warm, friendly]. Habla de tú, como alguien que ya fue emprendedor gastronómico: frases cortas, empatía primero y oferta después.",
       "regla": "Alterna masculina y femenina día a día. Mentor/explicativo = masculina; historia del emprendedor = femenina. T4 compara resultados por voz cada semana.",
-      "prohibido": "Voces con acento regional marcado (paisa u otro)."
+      "prohibido": "Voces con acento regional marcado (paisa u otro).",
+      "sin_respaldo": "Carlos prohibió voces de otras apps (5 nov 2026). Si ElevenLabs falla: Reel sin voz o pendiente, y reintentar."
     }
   },
   "mascota": "La llama del logo con ojos y boca (modo 'llama'). Es el avatar de la marca: habla en globo de texto y con la voz en off.",

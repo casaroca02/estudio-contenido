@@ -59,13 +59,14 @@ Carlos rechazó el diseño anterior por plano, oscuro, cargado y difuso, con fot
   - Historia con personaje: CLF-H30 (Chef Andrés con libreta para hablar de cifras, con `foco`).
   - Carruseles: CLF-C01 (portada con foto, cifras en `dato`, láminas de texto con tintes que alternan, cierre «Cocina oculta, apoyo visible») y CLF-C05 (educativo).
   - Variantes de fondo: `piezas/_demos/DEMO-V01.json`.
-- **Fotos reales: 5 estilos (5 nov 2026).** Carlos rechazó las primeras piezas con fotos reales (foto arriba y texto abajo, todas iguales). Con fotos reales usa estos estilos y no repitas el mismo dos veces seguidas. Están en prueba hasta que Carlos los apruebe:
+- **Fotos reales: 5 estilos (5 nov 2026).** Carlos rechazó las primeras piezas con fotos reales (foto arriba y texto abajo, todas iguales). Con fotos reales usa estos estilos y no repitas el mismo dos veces seguidas. Aprobados por Carlos:
   - `anotada` (CLF-H31, lámina 2 de CLF-C06): foto grande con 3 o 4 puntos numerados que señalan lo que se ve (campana, 2 o más puntos de gas, lavaplatos, cocina privada). Ubica cada punto sobre el objeto real; si la etiqueta choca con otra, usa `lado: "izq"`.
   - `presenta` (CLF-H32, lámina 3 de CLF-C06): foto real a sangre y Chef Andrés recortado (sin fondo) con globo arriba. Lleva Etiqueta IA.
   - `encuesta` (CLF-H33): dos tarjetas A/B con foto real para que respondan la historia. Elige fotos limpias, sin estanterías cargadas.
   - `collage` (CLF-P01): 2 polaroids grandes y ligeramente giradas sobre tomate (3 en historia). Que ninguna tape el pie de foto de la otra.
   - `inmersiva` (portada de CLF-C06): foto a sangre con un bloque amarillo de titular y chip negro de lugar. Ideal para portadas.
-  - Reel con fotos reales: CLF-R01 (4 escenas de 2 a 3 s con tarjeta blanca arriba, Chef Andrés con el precio y cierre; las escenas se sincronizan con lo que dice la voz).
+  - Reel: **motion graphic, no recorrido de fotos a pantalla completa** (Carlos, 5 nov 2026). El primer Reel con fotos reales a sangre (Ken Burns) se vio oscuro y las cocinas se veían viejas. Ahora el modelo es CLF-R01: gancho en tipografía cinética sobre tomate, fotos reales **dentro de tarjetas redondeadas** aclaradas (`modo: "foto"` con puntos que aparecen uno a uno), contador del precio con una foto pequeña (`mini`), pasos con foto pequeña, Chef Andrés y cierre. Usa solo las fotos más claras y modernas (modulo_cocina_frente, modulo_cocina_vertical, modulo_cocina_puerta, modulo_entrada_vertical). **No uses linea_caliente_campana, linea_caliente_despacho ni zona_lavado en video**: se ven viejas.
+- **Estado (5 nov 2026): Carlos aprobó las piezas gráficas H31, H32, H33, P01 y C06.** Los 5 estilos (anotada, presenta, encuesta, collage, inmersiva) son ahora referencia aprobada.
 - **Una idea por pieza o por lámina.**
 - El titular lleva máximo 7 palabras y 2 líneas, más 1 línea de apoyo si hace falta. Si necesitas más texto, divídelo en otra lámina o llévalo al caption.
 - En video con foto de stock, usa el tipo `capas`: la foto ocupa todo el fondo y el texto va en una tarjeta blanca. En Reels con foto, la tarjeta va arriba para no chocar con los subtítulos.
@@ -101,6 +102,7 @@ Carlos rechazó el diseño anterior por plano, oscuro, cargado y difuso, con fot
 - Gancho en el primer segundo: una pregunta que filtra («¿Vendes postres desde casa?») o un dato que sorprende.
 - Escribe las cifras en letras en los guiones de voz. Usa frases cortas.
 - Usa voces colombianas cálidas, sin acento regional marcado. Alterna la voz masculina y la femenina según `audio.voces.regla`.
+- **Voz solo con ElevenLabs (Carlos, 5 nov 2026). Esta regla reemplaza la «voz de respaldo» del prompt.** A Carlos no le gustó la voz de vidIQ: está prohibido usar vidIQ u otra app para la voz o gastar sus créditos en voz. Si ElevenLabs falla, haz el Reel en motion graphic sin voz (texto en pantalla) o deja la ficha en Producción con «Voz pendiente: reintentar ElevenLabs» en Notas QA, y reintenta en la siguiente corrida.
 - Usa música del banco, rotada. Mezcla la voz por encima con `duckTo` de la música.
 
 ## 8. Lista de control antes de producir
