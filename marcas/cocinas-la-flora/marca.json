@@ -150,28 +150,44 @@
     "musica_real": [],
     "musica_real_candidatas": [
       {
+        "nombre": "Hey Linda",
+        "artista": "Ovrsoull",
+        "url": "https://pixabay.com/music/upbeat-hey-linda-264380/",
+        "duracion": "2:07",
+        "estilo": "Urban latin alegre: brillante, optimista",
+        "content_id": false,
+        "archivo": "assets/audio/hey_linda.mp3",
+        "prioridad": 1
+      },
+      {
+        "nombre": "Reggaeton Beat",
+        "artista": "prettyjohn1",
+        "url": "https://pixabay.com/music/reggaeton-reggaeton-beat-511839/",
+        "duracion": "1:16",
+        "estilo": "Reguetón con instrumentos acústicos, brillante",
+        "content_id": false,
+        "archivo": "assets/audio/reggaeton_beat.mp3",
+        "prioridad": 2
+      },
+      {
         "nombre": "Deep House Sunset",
         "artista": "sunset-house-grooves",
         "url": "https://pixabay.com/music/soft-house-deep-house-sunset-538759/",
         "duracion": "3:11",
+        "estilo": "Soft house (respaldo)",
         "content_id": false,
-        "archivo": "assets/audio/deep_house_sunset.mp3"
+        "archivo": "assets/audio/deep_house_sunset.mp3",
+        "prioridad": 3
       },
       {
         "nombre": "House - Flying",
         "artista": "tape-echo",
         "url": "https://pixabay.com/music/house-house-flying-580004/",
         "duracion": "2:10",
+        "estilo": "House con ritmo (respaldo)",
         "content_id": false,
-        "archivo": "assets/audio/house_flying.mp3"
-      },
-      {
-        "nombre": "Soft - Soft Music (SolarFLEX)",
-        "artista": "SolarFLEX",
-        "url": "https://pixabay.com/music/soft-house-soft-soft-music-589025/",
-        "duracion": "1:48",
-        "content_id": false,
-        "archivo": "assets/audio/soft_solarflex.mp3"
+        "archivo": "assets/audio/house_flying.mp3",
+        "prioridad": 4
       }
     ]
   },
