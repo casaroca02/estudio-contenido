@@ -23,7 +23,9 @@ Reparte la semana así: unas 4 piezas de atraer, 3 de conectar y 2 de convertir.
 
 **Objeciones que hay que responder:** «Lo voy a pensar», «Es caro, en mi casa no pago arriendo», «¿Y si no vendo lo suficiente?», «¿Cuánto pago de servicios?».
 
-**Argumentos oficiales** (solo estos; las cifras salen de Notion): desde $1.300.000 al mes solo el espacio, contrato desde 6 meses, sin depósito, cocina 100 % privada, tres modalidades (solo espacio, con equipos u opción de compra de los equipos), servicios de unos $350.000 al mes en promedio, ubicación en La Flora · Chipichape, norte de Cali.
+**Propuesta de valor: «Cocina oculta, apoyo visible.»** El apoyo se ve en: flexibilidad, entender la necesidad de cada cliente y ajustarnos a ella, arranque rápido, poca burocracia y papeleo, y costos bajos frente a un local. Cada pieza de conectar o convertir debe mostrar al menos uno de estos apoyos, no solo el espacio.
+
+**Argumentos oficiales** (solo estos; las cifras salen de Notion): desde $1.300.000 al mes solo el espacio, contrato desde 6 meses, sin depósito, cocina 100 % privada, **2 o más puntos de gas, agua y electricidad: nos ajustamos a tu necesidad** (nunca escribas «2 puntos de gas» a secas), tres modalidades (solo espacio, con equipos u opción de compra de los equipos), servicios de unos $350.000 al mes en promedio, ubicación en La Flora · Chipichape, norte de Cali.
 
 ## 3. La imagen tiene que decir lo mismo que el texto
 

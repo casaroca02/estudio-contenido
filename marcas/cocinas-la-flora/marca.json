@@ -154,11 +154,11 @@
     "assets/img/hero_poster.webp"
   ],
   "sticker": "Norte de Cali",
-  "cta_titulo": "Tu cocina industrial *privada* en el norte de Cali",
+  "cta_titulo": "Cocina oculta, *apoyo visible*",
   "cta_puntos": [
     "Desde $1,3 M al mes",
-    "100 % privada",
-    "Contrato desde 6 meses"
+    "Arranque rápido, poco papeleo",
+    "Nos ajustamos a tu necesidad"
   ],
   "fotos_reales": {
     "amplias": [
@@ -172,6 +172,17 @@
       "assets/reales/despacho_empaques.jpg",
       "assets/reales/cuarto_frio_neveras.jpg",
       "assets/reales/modulo_vacio_nevera.jpg"
+    ]
+  },
+  "propuesta_valor": {
+    "lema": "Cocina oculta, apoyo visible.",
+    "apoyo": [
+      "Flexibilidad",
+      "Entendemos la necesidad de cada cliente",
+      "Nos ajustamos a lo que necesitas (por ejemplo, 2 o más puntos de gas)",
+      "Arranque rápido",
+      "Poca burocracia y papeleo",
+      "Costos bajos frente a un local"
     ]
   }
 }
