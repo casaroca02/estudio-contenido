@@ -146,7 +146,34 @@
         "volumen": 0.6
       }
     ],
-    "musica_libre_nota": "Biblioteca de música de Orshot: uso comercial libre, sin atribución. Se mezcla en el kit con \"musica\": \"<nombre>\" en el JSON del Reel. Gratis (no gasta créditos). Rota las pistas."
+    "musica_libre_nota": "RECHAZADAS por Carlos (5 nov 2026): suenan a sintetizador. No usar salvo que Carlos lo pida.",
+    "musica_real": [],
+    "musica_real_candidatas": [
+      {
+        "nombre": "Deep House Sunset",
+        "artista": "sunset-house-grooves",
+        "url": "https://pixabay.com/music/soft-house-deep-house-sunset-538759/",
+        "duracion": "3:11",
+        "content_id": false,
+        "archivo": "assets/audio/deep_house_sunset.mp3"
+      },
+      {
+        "nombre": "House - Flying",
+        "artista": "tape-echo",
+        "url": "https://pixabay.com/music/house-house-flying-580004/",
+        "duracion": "2:10",
+        "content_id": false,
+        "archivo": "assets/audio/house_flying.mp3"
+      },
+      {
+        "nombre": "Soft - Soft Music (SolarFLEX)",
+        "artista": "SolarFLEX",
+        "url": "https://pixabay.com/music/soft-house-soft-soft-music-589025/",
+        "duracion": "1:48",
+        "content_id": false,
+        "archivo": "assets/audio/soft_solarflex.mp3"
+      }
+    ]
   },
   "mascota": "La llama del logo con ojos y boca (modo 'llama'). Es el avatar de la marca: habla en globo de texto y con la voz en off.",
   "personajes": {
