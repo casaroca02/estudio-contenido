@@ -1,7 +1,39 @@
-{"marca":"cocinas-la-flora","codigo":"CLF-C05","tipo":"carrusel","laminas":[
- {"titulo":"¿Qué es una cocina *oculta*?","texto":"Te lo explicamos en 6 láminas →","imagen":"assets/img/cocina_casa.webp"},
- {"tipo":"claro","titulo":"No es un restaurante *escondido*","texto":"Es una cocina hecha solo para producir: sin mesas ni atención al público."},
- {"tipo":"claro","titulo":"Tus clientes *piden*, tú cocinas","texto":"Vendes por apps de domicilio, WhatsApp o redes. Tu cocina solo produce."},
- {"tipo":"dato","dato":"100 %","titulo":"Privada","texto":"Sin zonas compartidas. 2 puntos de gas, agua y electricidad."},
- {"tipo":"dato","dato":"$1,3 M","titulo":"Al mes, desde","texto":"Solo el espacio. Servicios cerca de $350.000. Contrato desde 6 meses."},
- {"tipo":"claro","titulo":"¿Para *quién* es?","texto":"Postres, almuerzos, comida rápida, marcas virtuales y restaurantes que quieren una sede de domicilios."}]}
+{
+ "marca": "cocinas-la-flora",
+ "codigo": "CLF-C05",
+ "tipo": "carrusel",
+ "laminas": [
+  {
+   "titulo": "¿Qué es una cocina *oculta*?",
+   "texto": "Te lo explicamos en 6 láminas →",
+   "imagen": "assets/stock/cocina-profesional/unsplash-rO6709B116E.jpg"
+  },
+  {
+   "tipo": "claro",
+   "titulo": "No es un restaurante *escondido*",
+   "texto": "Es una cocina hecha solo para producir: sin mesas ni atención al público."
+  },
+  {
+   "tipo": "claro",
+   "titulo": "Tus clientes *piden*, tú cocinas",
+   "texto": "Vendes por apps de domicilio, WhatsApp o redes. Tu cocina solo produce."
+  },
+  {
+   "tipo": "dato",
+   "dato": "100 %",
+   "titulo": "Privada",
+   "texto": "Sin zonas compartidas. 2 puntos de gas, agua y electricidad."
+  },
+  {
+   "tipo": "dato",
+   "dato": "$1,3 M",
+   "titulo": "Al mes, desde",
+   "texto": "Solo el espacio. Servicios cerca de $350.000. Contrato desde 6 meses."
+  },
+  {
+   "tipo": "claro",
+   "titulo": "¿Para *quién* es?",
+   "texto": "Postres, almuerzos, comida rápida, marcas virtuales y restaurantes que quieren una sede de domicilios."
+  }
+ ]
+}
