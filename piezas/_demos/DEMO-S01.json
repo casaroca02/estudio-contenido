@@ -1,0 +1,24 @@
+{
+ "marca": "cocinas-la-flora",
+ "codigo": "DEMO-S01",
+ "tipo": "capas",
+ "escenas": [
+  {
+   "titulo": "¿Vendes postres desde *casa*?",
+   "fuente": "https://storage.orshot.com/stock/pixabay/photo/5581806.jpg",
+   "segundos": 3.5
+  },
+  {
+   "titulo": "Tu propia cocina en el *norte de Cali*",
+   "texto": "100 % privada",
+   "fuente": "https://storage.orshot.com/stock/pixabay/photo/4059154.jpg",
+   "segundos": 3.5
+  },
+  {
+   "titulo": "Desde *$1,3 M* al mes",
+   "texto": "Solo el espacio · desde 6 meses",
+   "fuente": "https://storage.orshot.com/stock/pixabay/photo/4736398.jpg",
+   "segundos": 3.5
+  }
+ ]
+}

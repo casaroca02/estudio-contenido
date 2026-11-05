@@ -1,0 +1,34 @@
+{
+  "codigo": "DEMO-S01",
+  "marca": "cocinas-la-flora",
+  "tipo": "capas",
+  "archivos": [
+    "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-S01/capa_01.png",
+    "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-S01/capa_02.png",
+    "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-S01/capa_03.png",
+    "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-S01/cierre.jpg"
+  ],
+  "escenas": [
+    {
+      "segundos": 3.5,
+      "fuente": "https://storage.orshot.com/stock/pixabay/photo/5581806.jpg",
+      "capa": "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-S01/capa_01.png"
+    },
+    {
+      "segundos": 3.5,
+      "fuente": "https://storage.orshot.com/stock/pixabay/photo/4059154.jpg",
+      "capa": "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-S01/capa_02.png"
+    },
+    {
+      "segundos": 3.5,
+      "fuente": "https://storage.orshot.com/stock/pixabay/photo/4736398.jpg",
+      "capa": "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-S01/capa_03.png"
+    },
+    {
+      "segundos": 3,
+      "fuente": "https://raw.githubusercontent.com/casaroca02/estudio-contenido/main/publicaciones/cocinas-la-flora/DEMO-S01/cierre.jpg",
+      "capa": null
+    }
+  ],
+  "duracion_segundos": 13.5
+}

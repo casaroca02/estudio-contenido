@@ -61,19 +61,23 @@
       },
       "femenina": {
         "proveedor": "ElevenLabs",
-        "voice_id": "YyzMdrXIPdg4iUnQfJ1D",
-        "nombre": "Mariana · la amiga paisa, cercana, sin tono de vendedor",
-        "personaje": "Emprendedora gastronómica (cliente potencial)",
-        "uso": "Historias de dolor y aspiración del emprendedor: cocinar en casa, crecer, dar el salto"
+        "voice_id": "irla3teuChAApguKnzms",
+        "nombre": "Diana García · colombiana, cálida, explicativa, sin acento regional marcado",
+        "personaje": "La emprendedora",
+        "uso": "Historias de dolor y aspiración del emprendedor"
       },
       "alternas": [
         {
-          "voice_id": "Fn8ZcuyNYI4qImgQ2yuH",
-          "nombre": "ALE ALEJANDRO · amigo conversacional colombiano"
+          "voice_id": "heUagVbSyc7SphaYWFT3",
+          "nombre": "Claudia Isabel · colombiana cálida, neutra"
         },
         {
           "voice_id": "dMeBcNV5QVbfDqzti5Jl",
           "nombre": "Ivonny · colombiana cálida, 35-45 años"
+        },
+        {
+          "voice_id": "Fn8ZcuyNYI4qImgQ2yuH",
+          "nombre": "ALE ALEJANDRO · hombre, amigo conversacional"
         }
       ],
       "respaldo_vidiq": {
@@ -82,8 +86,62 @@
       },
       "modelo": "eleven_v4",
       "direccion": "Empieza el guion con la etiqueta [warm, friendly]. Habla de tú, como alguien que ya fue emprendedor gastronómico: frases cortas, empatía primero y oferta después.",
-      "regla": "Alterna masculina y femenina día a día. Mentor/explicativo = masculina; historia del emprendedor = femenina. T4 compara resultados por voz cada semana."
+      "regla": "Alterna masculina y femenina día a día. Mentor/explicativo = masculina; historia del emprendedor = femenina. T4 compara resultados por voz cada semana.",
+      "prohibido": "Voces con acento regional marcado (paisa u otro)."
     }
   },
-  "mascota": "La llama del logo con ojos y boca (modo 'llama'). Es el avatar de la marca: habla en globo de texto y con la voz en off."
+  "mascota": "La llama del logo con ojos y boca (modo 'llama'). Es el avatar de la marca: habla en globo de texto y con la voz en off.",
+  "personajes": {
+    "andres": {
+      "nombre": "Chef Andrés",
+      "rol": "Mentor: explica, da los datos oficiales y cierra con «Cocina oculta, apoyo visible.»",
+      "voz": "masculina",
+      "poses": {
+        "olla": {
+          "archivo": "assets/personajes/andres_olla.png",
+          "tipo": "recorte",
+          "canva": "MAHYwtLw8Tk"
+        },
+        "libreta": {
+          "archivo": "assets/personajes/andres_libreta.png",
+          "tipo": "recorte",
+          "canva": "MAHYwu_glCQ"
+        },
+        "retrato": {
+          "archivo": "assets/personajes/andres_retrato.png",
+          "tipo": "escena",
+          "canva": "MAHYwv2loAQ"
+        }
+      }
+    },
+    "emprendedora": {
+      "nombre": "La emprendedora",
+      "rol": "Cliente potencial sin nombre: plantea el problema y hace las preguntas; nunca da cifras ni se presenta como clienta real",
+      "voz": "femenina",
+      "poses": {
+        "celular": {
+          "archivo": "assets/personajes/emprendedora_celular.png",
+          "tipo": "recorte",
+          "canva": "MAHYw24eH0Q"
+        },
+        "retrato": {
+          "archivo": "assets/personajes/emprendedora_retrato.png",
+          "tipo": "escena",
+          "canva": "MAHYw6ZbAjM"
+        }
+      }
+    },
+    "juntos": {
+      "nombre": "Chef Andrés y la emprendedora",
+      "rol": "Escena de solución",
+      "voz": "masculina",
+      "poses": {
+        "cocina": {
+          "archivo": "assets/personajes/juntos_cocina.png",
+          "tipo": "ancho",
+          "canva": "MAHYw-Cmm48"
+        }
+      }
+    }
+  }
 }

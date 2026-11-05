@@ -150,6 +150,31 @@ function css(m, W, H) {
   .bubble:after{content:"";position:absolute;left:50%;bottom:-46px;margin-left:-40px;border:40px solid transparent;border-top-color:${c.fondo_claro};border-bottom:0}
   .bubble h2 em{color:${c.acento_texto}}
   .mascota{position:absolute;left:50%;margin-left:-180px;bottom:690px;width:360px;height:514px}
+  .pj{position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:${W - 60}px;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 9%);mask-image:linear-gradient(180deg,transparent 0,#000 9%)}
+  .pj img{width:100%;display:block}
+  .pjesc{position:absolute;inset:0;background-size:cover;background-position:center top}
+  .pjscrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,12,.80) 0%,rgba(15,13,12,.35) 34%,rgba(15,13,12,0) 55%)}
+  .globo{position:absolute;left:70px;right:70px;top:${tall ? 300 : 150}px;background:${c.fondo_oscuro};color:${c.fondo_claro};border-radius:44px;padding:50px 54px}
+  .globo:after{content:"";position:absolute;left:58%;bottom:-44px;border:44px solid transparent;border-top-color:${c.fondo_oscuro};border-bottom:0}
+  .globo.abajo{top:auto;bottom:${tall ? 640 : 120}px}
+  .globo.abajo:after{bottom:auto;top:-44px;border:44px solid transparent;border-bottom-color:${c.fondo_oscuro};border-top:0}
+  .pjblur{position:absolute;inset:-60px;background-size:cover;background-position:center;filter:blur(40px) brightness(.55)}
+  .pjancho{position:absolute;left:0;right:0;top:${tall ? 400 : 200}px}
+  .pjancho img{width:100%;display:block}
+  .globo h2 em{color:${c.resalte}}
+  .globo .quien{font:400 28px "DM Mono";letter-spacing:3px;color:${c.acento};margin-bottom:18px;display:flex;align-items:center;gap:16px}
+  .ondas{display:inline-flex;gap:6px;align-items:center;height:30px}
+  .ondas i{display:block;width:6px;height:30px;border-radius:3px;background:${c.acento};transform-origin:50% 50%}
+  .a-onda{animation:kOnda .5s ease-in-out infinite alternate;animation-play-state:paused!important;animation-fill-mode:both}
+  .a-resp{animation:kResp 2.6s ease-in-out infinite alternate;animation-play-state:paused!important;animation-fill-mode:both}
+  @keyframes kOnda{from{transform:scaleY(.2)}to{transform:scaleY(1)}}
+  @keyframes kResp{from{transform:translateX(-50%) translateY(0) scale(1)}to{transform:translateX(-50%) translateY(-12px) scale(1.012)}}
+  .fade-baja{position:absolute;left:0;right:0;bottom:0;height:${tall ? 900 : 620}px;background:linear-gradient(180deg,rgba(15,13,12,0) 0%,rgba(15,13,12,.55) 100%)}
+  .limpia{position:absolute;left:64px;right:64px;bottom:${tall ? 400 : 90}px;background:${c.fondo_claro};color:${c.fondo_oscuro};border-radius:32px;padding:40px 46px}
+  .limpia .et{font:400 26px "DM Mono";letter-spacing:4px;color:${c.acento_texto};margin-bottom:14px}
+  .limpia h2{font-size:var(--fs,64px)}
+  .limpia h2 em{color:${c.acento_texto}}
+  .limpia p{font-size:36px;margin-top:14px;opacity:.85}
   .sub{position:absolute;left:70px;right:70px;bottom:520px;display:flex;justify-content:center}
   .sub span{background:${c.fondo_oscuro};color:${c.fondo_claro};font:800 58px/1.18 Archivo;padding:18px 30px;border-radius:20px;text-align:center;box-shadow:0 0 0 6px ${c.acento}}
   `;
@@ -245,6 +270,14 @@ function laminaBody(m, l, i, n, H) {
   if (l.tipo === 'cta') return ctaBody(m, l);
   const info = infoBody(m, l, H, false);
   if (info) return `<div class="s ${fondoClase(l, 'claro')}">${lab}${info}${pg}</div>`;
+  if (l.tipo === 'foto') {
+    const img = l.imagen || m.imagenes[i % m.imagenes.length];
+    return `<div class="s"><div class="bg" style="background-image:url(${fileUrl(m, img)})"></div>${limpiaCard(m, l, false)}${pg}</div>`;
+  }
+  if (l.tipo === 'personaje') {
+    const r = personajeBody(m, l, H, false);
+    return `<div class="s ${r.cls}">${r.html}${lab}${pg}</div>`;
+  }
   if (l.tipo === 'dato') {
     return `<div class="s ${fondoClase(l, 'claro')}">${lab}
       <div class="top"><div class="big">${rich(l.dato)}</div><div style="height:30px"></div><h2>${rich(l.titulo)}</h2></div>
@@ -261,6 +294,34 @@ function laminaBody(m, l, i, n, H) {
     ${lab}
     <div class="top"><h1 style="--fs:${l.fs || 112}px">${rich(l.titulo)}</h1></div>
     <div class="bottom"><p>${rich(l.texto || '')}</p></div>${pg}</div>`;
+}
+
+// Tarjeta limpia sobre foto: la foto manda, el texto va corto en una tarjeta crema
+function limpiaCard(m, l, anim) {
+  const t = anim === false ? rich(l.titulo) : kineticWords(l.titulo, anim + 0.3, 0.12).html;
+  return `<div class="fade-baja"></div><div class="limpia${anim === false ? '' : ' a-up" style="animation-delay:' + anim + 's'}">
+    <div class="et">${esc(l.etiqueta || m.etiqueta)}</div><h2 style="--fs:${l.fs || 64}px">${t}</h2>${l.texto ? `<p>${rich(l.texto)}</p>` : ''}</div>`;
+}
+
+// Personaje de marca (Chef Andrés, la emprendedora) con globo de diálogo
+function personajeBody(m, e, H, anim) {
+  const pj = (m.personajes || {})[e.personaje];
+  if (!pj) throw new Error('personaje desconocido: ' + e.personaje);
+  const pose = pj.poses[e.pose] || Object.values(pj.poses)[0];
+  if (!fs.existsSync(path.join(ROOT, 'marcas', m.slug, pose.archivo))) throw new Error('falta la imagen del personaje: ' + pose.archivo);
+  const t = anim === false ? rich(e.titulo) : kineticWords(e.titulo, anim + 0.5, 0.13).html;
+  const ondas = anim === false ? '' : `<span class="ondas">${[0, .12, .24, .08, .18].map(d => `<i class="a-onda" style="animation-delay:${d}s"></i>`).join('')}</span>`;
+  const abajo = pose.tipo === 'escena' || pose.tipo === 'ancho';
+  const globo = `<div class="globo${abajo ? ' abajo' : ''}${anim === false ? '' : ' a-pop" style="animation-delay:' + (anim + 0.2) + 's'}"><div class="quien">${esc((pj.nombre || '').toUpperCase())}${ondas}</div>
+    <h2 style="--fs:${e.fs || 70}px">${t}</h2>${e.texto ? `<p style="margin-top:22px;font-size:40px;color:${m.colores.arena}">${rich(e.texto)}</p>` : ''}</div>`;
+  if (pose.tipo === 'ancho') {
+    const u = fileUrl(m, pose.archivo);
+    return { cls: '', html: `<div class="pjblur" style="background-image:url(${u})"></div><div class="pjancho${anim === false ? '' : ' a-fade'}"><img src="${u}"></div>${globo}` };
+  }
+  if (pose.tipo === 'escena') {
+    return { cls: '', html: `<div class="pjesc${anim === false ? '' : ' a-zoom'}" style="background-image:url(${fileUrl(m, pose.archivo)})"></div><div class="pjscrim"></div>${globo}` };
+  }
+  return { cls: 'claro', html: `<div class="pj${anim === false ? '' : ' a-resp'}"><img src="${fileUrl(m, pose.archivo)}"></div>${globo}` };
 }
 
 // Escena de motion graphic (Reel)
@@ -282,6 +343,9 @@ function motionBody(m, e, H) {
       <div class="big a-pop" style="animation-delay:.3s;font-size:${e.fs || 250}px">${cnt(0, e, txt, 0.3)}</div>
       <div style="height:40px"></div><h2 class="a-up" style="animation-delay:1.4s">${rich(e.titulo || '')}</h2>
       ${e.texto ? `<div style="height:30px"></div><p class="a-up" style="animation-delay:1.8s">${rich(e.texto)}</p>` : ''}</div>`;
+  } else if (e.modo === 'personaje') {
+    const r = personajeBody(m, e, H, 0);
+    return `<div class="s ${r.cls}">${r.html}<div class="lab a-fade" style="animation-delay:0s">${esc(m.etiqueta)}</div></div>`;
   } else if (e.modo === 'llama') {
     const k = kineticWords(e.titulo, 0.5, 0.14);
     inner = `<div class="bubble a-pop" style="animation-delay:.2s"><h2 style="--fs:${e.fs || 74}px">${k.html}</h2>
@@ -376,6 +440,21 @@ async function main() {
       await shoot(browser, { css: css(m, W, H), body: laminaBody(m, l, i, laminas.length, H) }, W, H, out);
       files.push(out);
     }
+  } else if (tipo === 'capas') {
+    // Capas transparentes para montar en vidiq_compose sobre fotos o videos de stock
+    const W = 1080, H = 1920;
+    spec._escenas = [];
+    for (let i = 0; i < spec.escenas.length; i++) {
+      const e = spec.escenas[i];
+      const out = path.join(outDir, `capa_${String(i + 1).padStart(2, '0')}.png`);
+      await shoot(browser, { css: css(m, W, H), body: `<div class="s" style="background:transparent">${limpiaCard(m, e, false)}</div>` }, W, H, out, true);
+      files.push(out);
+      spec._escenas.push({ segundos: e.segundos || 3.5, fuente: e.fuente || null, capa: out });
+    }
+    const cta = path.join(outDir, 'cierre.jpg');
+    await shoot(browser, { css: css(m, W, H), body: ctaBody(m, spec) }, W, H, cta);
+    files.push(cta);
+    spec._escenas.push({ segundos: spec.cta_segundos || 3, fuente: 'cierre', capa: null });
   } else if (tipo === 'reel') {
     const W = 1080, H = 1920;
     const parts = [];
@@ -459,6 +538,10 @@ async function main() {
   const rel = f => path.relative(ROOT, f).split(path.sep).join('/');
   const manifest = { codigo: spec.codigo, marca: spec.marca, tipo, archivos: files.map(f => `${REPO_RAW}/${rel(f)}`) };
   if (spec._duracion) manifest.duracion_segundos = spec._duracion;
+  if (spec._escenas) {
+    manifest.escenas = spec._escenas.map(x => ({ segundos: x.segundos, fuente: x.fuente === 'cierre' ? `${REPO_RAW}/${rel(path.join(outDir, 'cierre.jpg'))}` : x.fuente, capa: x.capa ? `${REPO_RAW}/${rel(x.capa)}` : null }));
+    manifest.duracion_segundos = spec._escenas.reduce((a, x) => a + x.segundos, 0);
+  }
   fs.writeFileSync(path.join(outDir, 'manifest.json'), JSON.stringify(manifest, null, 2));
   console.log(JSON.stringify(manifest, null, 2));
 }

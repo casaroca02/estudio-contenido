@@ -1,0 +1,6 @@
+{"marca":"cocinas-la-flora","codigo":"DEMO-P01","tipo":"reel","escenas":[
+ {"modo":"personaje","personaje":"emprendedora","pose":"celular","titulo":"Los pedidos crecen y mi cocina *ya no da*","segundos":3.6},
+ {"modo":"personaje","personaje":"andres","pose":"libreta","titulo":"Ten tu cocina propia, *sin pagar un local*","texto":"Desde $1,3 M al mes · solo el espacio","segundos":4},
+ {"modo":"personaje","personaje":"juntos","pose":"cocina","titulo":"Cocina oculta, *apoyo visible*","segundos":3.4},
+ {"modo":"personaje","personaje":"andres","pose":"retrato","titulo":"Escríbeme y te muestro *tu cocina*","segundos":3.2}
+]}
