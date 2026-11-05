@@ -54,6 +54,13 @@ Carlos rechazó el diseño anterior por plano, oscuro, cargado y difuso, con fot
 - **Carrusel:** la portada usa el mismo diseño (sin CTA, con «Desliza →»); las láminas de texto alternan fondos claros (crema, salvia y durazno) y el cierre es claro, con beneficios y el CTA abajo.
 - **Rota el fondo** (`variante`): claro (por defecto), `oscuro` (negativo, carbón con resaltado amarillo), `acento` (tomate), `salvia` y `durazno`. Nunca dos piezas seguidas con la misma variante. En la semana: unas 3 claras, 2 oscuras, 1 tomate y 1 salvia o durazno. Las láminas de texto del carrusel también aceptan `variante: "oscuro"`.
 - **Herramientas de la lámina v2:** `alto` (alto de la foto), `foto_real` (sello «FOTO REAL»), `galeria` (2 a 4 fotos en cuadrícula), `lista` (hasta 3 puntos «Título|detalle» en tarjetas blancas), `sticker` y `sticker2`.
+- **Piezas de referencia aprobadas por Carlos (5 nov 2026).** Antes de diseñar, abre el JSON en `piezas/cocinas-la-flora/` y la imagen en `publicaciones/cocinas-la-flora/` del ejemplo más parecido, y parte de él:
+  - Historias con foto de stock por tema: CLF-H26 (cocina industrial), CLF-H27 (persona en cocina profesional, sticker «Nuevo»), CLF-H28 (ollas industriales), CLF-H29 (hamburguesa).
+  - Historia con personaje: CLF-H30 (Chef Andrés con libreta para hablar de cifras, con `foco`).
+  - Historias con fotos reales: CLF-H31 (foto amplia y sello), CLF-H32 (fondo oscuro con `lista` de 3 modalidades), CLF-H33 (`galeria` sobre salvia).
+  - Post: CLF-P01 (galería real y CTA abajo).
+  - Carruseles: CLF-C01 (portada con foto, cifras en `dato`, láminas de texto con tintes que alternan, cierre «Cocina oculta, apoyo visible»), CLF-C05 (educativo) y CLF-C06 (recorrido con fotos reales, `lista` y `pasos`).
+  - Variantes de fondo: `piezas/_demos/DEMO-V01.json`.
 - **Una idea por pieza o por lámina.**
 - El titular lleva máximo 7 palabras y 2 líneas, más 1 línea de apoyo si hace falta. Si necesitas más texto, divídelo en otra lámina o llévalo al caption.
 - En video con foto de stock, usa el tipo `capas`: la foto ocupa todo el fondo y el texto va en una tarjeta blanca. En Reels con foto, la tarjeta va arriba para no chocar con los subtítulos.
