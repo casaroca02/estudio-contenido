@@ -677,8 +677,9 @@ async function main() {
       const dur = +execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', video]).toString().trim();
       const ls = lib && lib.loop ? lib.loop.start : 0, le = lib && lib.loop ? lib.loop.end : null;
       const vol = spec.volumen_musica || (lib && lib.volumen) || 0.6;
-      const loopF = le ? `[1:a]asplit=2[m0][m1];[m0]atrim=0:${le},asetpts=N/SR/TB[a0];[m1]atrim=${ls}:${le},asetpts=N/SR/TB,aloop=loop=-1:size=2e9[a1];[a0][a1]concat=n=2:v=0:a=1[mm];[mm]`
-        : `[1:a]aloop=loop=-1:size=2e9,`;
+      const ini = spec.musica_inicio != null ? spec.musica_inicio : (lib && lib.inicio) || 0;
+      const loopF = !le ? `[1:a]atrim=start=${ini},asetpts=N/SR/TB,apad,` : le ? `[1:a]asplit=2[m0][m1];[m0]atrim=0:${le},asetpts=N/SR/TB[a0];[m1]atrim=${ls}:${le},asetpts=N/SR/TB,aloop=loop=-1:size=2e9[a1];[a0][a1]concat=n=2:v=0:a=1[mm];[mm]`
+        : '';
       const fade = `atrim=0:${dur},afade=t=in:d=0.3,afade=t=out:st=${Math.max(0, dur - 1.5)}:d=1.5,volume=${vol}[a]`;
       ff(['-i', video, '-i', music, '-filter_complex', (le ? loopF + fade : loopF + fade), '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-t', String(dur), '-movflags', '+faststart', out]);
     } else {

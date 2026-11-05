@@ -147,49 +147,105 @@
       }
     ],
     "musica_libre_nota": "RECHAZADAS por Carlos (5 nov 2026): suenan a sintetizador. No usar salvo que Carlos lo pida.",
-    "musica_real": [],
-    "musica_real_candidatas": [
+    "musica_real": [
       {
         "nombre": "Hey Linda",
-        "artista": "Ovrsoull",
-        "url": "https://pixabay.com/music/upbeat-hey-linda-264380/",
-        "duracion": "2:07",
-        "estilo": "Urban latin alegre: brillante, optimista",
-        "content_id": false,
         "archivo": "assets/audio/hey_linda.mp3",
-        "prioridad": 1
+        "artista": "Ovrsoull (Pixabay)",
+        "estilo": "Urban latin alegre, buena vibra",
+        "inicio": 9,
+        "tramos_fuertes": [
+          [
+            9,
+            38
+          ],
+          [
+            47,
+            66
+          ],
+          [
+            75,
+            86
+          ],
+          [
+            95,
+            114
+          ]
+        ],
+        "volumen": 0.75,
+        "uso": "Opción principal: ganchos, precio, recorridos"
       },
       {
-        "nombre": "Reggaeton Beat",
-        "artista": "prettyjohn1",
-        "url": "https://pixabay.com/music/reggaeton-reggaeton-beat-511839/",
-        "duracion": "1:16",
-        "estilo": "Reguetón con instrumentos acústicos, brillante",
-        "content_id": false,
-        "archivo": "assets/audio/reggaeton_beat.mp3",
-        "prioridad": 2
-      },
-      {
-        "nombre": "Deep House Sunset",
-        "artista": "sunset-house-grooves",
-        "url": "https://pixabay.com/music/soft-house-deep-house-sunset-538759/",
-        "duracion": "3:11",
-        "estilo": "Soft house (respaldo)",
-        "content_id": false,
-        "archivo": "assets/audio/deep_house_sunset.mp3",
-        "prioridad": 3
+        "nombre": "Que la gasolina",
+        "archivo": "assets/audio/que_la_gasolina.mp3",
+        "artista": "Watermelon_Beats (Pixabay)",
+        "estilo": "Reguetón dembow",
+        "inicio": 9.5,
+        "tramos_fuertes": [
+          [
+            9.5,
+            56
+          ],
+          [
+            58,
+            78
+          ],
+          [
+            88,
+            96
+          ]
+        ],
+        "volumen": 0.75,
+        "uso": "Reels con más calle: emprendedores, domicilios, números"
       },
       {
         "nombre": "House - Flying",
-        "artista": "tape-echo",
-        "url": "https://pixabay.com/music/house-house-flying-580004/",
-        "duracion": "2:10",
-        "estilo": "House con ritmo (respaldo)",
-        "content_id": false,
         "archivo": "assets/audio/house_flying.mp3",
-        "prioridad": 4
+        "artista": "tape-echo (Pixabay)",
+        "estilo": "House con ritmo",
+        "inicio": 29,
+        "tramos_fuertes": [
+          [
+            29,
+            60
+          ],
+          [
+            90,
+            121
+          ]
+        ],
+        "volumen": 0.65,
+        "uso": "Recorridos, historias en video, contenido de espacio"
+      },
+      {
+        "nombre": "Deep House Sunset",
+        "archivo": "assets/audio/deep_house_sunset.mp3",
+        "artista": "sunset-house-grooves (Pixabay)",
+        "estilo": "Soft house luminoso",
+        "inicio": 30,
+        "tramos_fuertes": [
+          [
+            30,
+            58
+          ],
+          [
+            62,
+            86
+          ],
+          [
+            94,
+            136
+          ],
+          [
+            140,
+            163
+          ]
+        ],
+        "volumen": 0.65,
+        "uso": "Piezas tranquilas, educativas, de marca"
       }
-    ]
+    ],
+    "musica_real_nota": "Pistas elegidas por Carlos el 5 nov 2026 (Pixabay, sin Content ID). Rótalas y usa tramos distintos con \"musica_inicio\" (ver tramos_fuertes) para no repetir el mismo inicio. Con voz, volumen_musica 0.35."
   },
   "mascota": "La llama del logo con ojos y boca (modo 'llama'). Es el avatar de la marca: habla en globo de texto y con la voz en off.",
   "personajes": {
