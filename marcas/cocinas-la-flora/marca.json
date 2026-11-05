@@ -36,5 +36,32 @@
     "assets/video/clf_reel_domicilios.mp4",
     "assets/video/clf_reel_negocio.mp4",
     "assets/video/clf_testimonio.mp4"
-  ]
+  ],
+  "audio": {
+    "voz_principal": {
+      "proveedor": "ElevenLabs (conector)",
+      "voice_id": "yfUfwZTRubVrsUZWqzwp",
+      "nombre": "Lina · colombiana",
+      "modelo": "eleven_v4"
+    },
+    "voz_respaldo": {
+      "proveedor": "vidIQ (vidiq_voiceover_generate)",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "nombre": "Sarah"
+    },
+    "musica": [
+      {
+        "nombre": "Latin lo-fi 01",
+        "url": "https://ai-music-tracks.s3.us-east-1.amazonaws.com/166723fd-1af9-4613-b05d-c30271a28cef/d0a0ab51-edc2-4b58-b8c1-cb55f62aa20c.wav",
+        "segundos": 57.8,
+        "origen": "vidIQ, original libre de regalías"
+      }
+    ],
+    "mezcla": {
+      "volumen_musica": 0.5,
+      "musica_bajo_voz": 0.18,
+      "fade_ms": 400
+    }
+  },
+  "mascota": "La llama del logo con ojos y boca (modo 'llama'). Es el avatar de la marca: habla en globo de texto y con la voz en off."
 }
