@@ -1,6 +1,6 @@
 name: Traer imágenes
 # Autorizado por Carlos (4 nov 2026, opción B): el entorno de producción solo llega a GitHub.
-# Este flujo descarga fotos libres de regalías (Pixabay/Unsplash vía Orshot) y las imágenes
+# Este flujo descarga fotos y música libres de regalías (música: biblioteca de Orshot, uso comercial sin atribución) (Pixabay/Unsplash vía Orshot) y las imágenes
 # oficiales de la marca (exportadas de Canva) listadas en cola/*.txt, y las guarda en el repositorio.
 # Formato de cada línea: <url> <ruta destino dentro de marcas/>
 on:
@@ -24,9 +24,10 @@ jobs:
               [ -z "$url" ] && continue
               case "$destino" in marcas/*) ;; *) echo "destino inválido: $destino"; continue;; esac
               case "$destino" in *..*) echo "destino inválido: $destino"; continue;; esac
-              case "$url" in https://storage.orshot.com/*|https://export-download.canva.com/*|https://*.canva.com/*|https://cdn.pixabay.com/*|https://images.unsplash.com/*|https://images.pexels.com/*) ;; *) echo "origen no permitido: $url"; continue;; esac
+              case "$url" in https://storage.orshot.com/*|https://cdn.orshot.com/*|https://export-download.canva.com/*|https://*.canva.com/*|https://cdn.pixabay.com/*|https://images.unsplash.com/*|https://images.pexels.com/*) ;; *) echo "origen no permitido: $url"; continue;; esac
               mkdir -p "$(dirname "$destino")"
               curl -fsSL --max-time 90 "$url" -o /tmp/img || { echo "falló $url"; continue; }
+              case "$destino" in *.m4a|*.mp3|*.wav) mv /tmp/img "$destino"; echo "ok audio $destino"; continue;; esac
               python3 -c "
           from PIL import Image, ImageOps; import sys
           d = sys.argv[1]
