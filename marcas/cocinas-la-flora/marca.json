@@ -25,14 +25,14 @@
   "cta_web": "cocinaslaflora.com · La Flora, Chipichape",
   "logo_llama": "assets/logo/CocinasLaFlora_llama.svg",
   "imagenes": [
-    "assets/reales/modulo_frente_amplio.jpg",
+    "assets/reales/modulo_cocina_frente.jpg",
     "assets/img/chef_feliz.webp",
     "assets/stock/cocina-profesional/unsplash-GjY4qZfMybw.jpg",
     "assets/stock/cocina-profesional/pixabay-2616326.jpg",
     "assets/stock/emplatado/unsplash-KDVGz-qnHfc.jpg",
     "assets/stock/hamburguesas/unsplash-PxJ9zkM2wdA.jpg",
     "assets/stock/cocina-profesional/unsplash-rO6709B116E.jpg",
-    "assets/reales/modulo_frente.jpg"
+    "assets/reales/modulo_cocina_puerta.jpg"
   ],
   "videos": [
     "assets/video/clf_reel_ganchos.mp4",
@@ -161,17 +161,25 @@
     "Nos ajustamos a tu necesidad"
   ],
   "fotos_reales": {
-    "amplias": [
-      "assets/reales/modulo_frente_amplio.jpg",
-      "assets/reales/modulo_frente.jpg",
-      "assets/reales/modulo_panoramica.jpg"
+    "nota": "Retocadas el 5 nov 2026 a partir de las fotos de Carlos (luz, color, nitidez, limpieza de piso y desorden). No agregar ni quitar equipos.",
+    "modulo_vacio_amplias": [
+      "assets/reales/modulo_cocina_frente.jpg",
+      "assets/reales/modulo_cocina_puerta.jpg",
+      "assets/reales/modulo_cocina_vertical.jpg",
+      "assets/reales/modulo_entrada_vertical.jpg",
+      "assets/reales/modulo_vacio_equipado.jpg"
     ],
-    "detalle_solo_galeria": [
-      "assets/reales/linea_caliente.jpg",
-      "assets/reales/neveras_industriales.jpg",
-      "assets/reales/despacho_empaques.jpg",
-      "assets/reales/cuarto_frio_neveras.jpg",
-      "assets/reales/modulo_vacio_nevera.jpg"
+    "en_operacion": [
+      "assets/reales/linea_caliente_campana.jpg",
+      "assets/reales/linea_caliente_despacho.jpg",
+      "assets/reales/cuarto_frio.jpg",
+      "assets/reales/zona_lavado.jpg"
+    ],
+    "verticales": [
+      "assets/reales/modulo_cocina_vertical.jpg",
+      "assets/reales/modulo_entrada_vertical.jpg",
+      "assets/reales/modulo_vacio_equipado.jpg",
+      "assets/reales/linea_caliente_campana.jpg"
     ]
   },
   "propuesta_valor": {
