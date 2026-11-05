@@ -55,7 +55,7 @@ Escena de motion graphic: lleva `modo` (y `segundos`, por defecto 4):
 
 ## Postproducción de audio (voz + música)
 
-1. Voz en off: ElevenLabs `creative_generate_speech` con la `voz_principal` de `marca.json` (1 toma). Si el plan gratis está ocupado o sin créditos, `vidiq_voiceover_generate` con la `voz_respaldo`. Guion de 25–35 palabras para un Reel de 14–18 s.
+1. Voz en off: ElevenLabs `creative_generate_speech` (modelo `eleven_v4`, 1 toma) con la voz de `audio.voces` que indique `audio.voces.regla` (masculina = mentor; femenina = historia del emprendedor), y la `direccion` al inicio del guion. La URL `content_url` sirve directo en `vidiq_compose` (caduca en unas 2 horas: mezclar enseguida). Si ElevenLabs está ocupado, reintentar 1 vez a los 2 minutos; si sigue, `vidiq_voiceover_generate` con `respaldo_vidiq`. Guion de 25–35 palabras para un Reel de 14–18 s.
 2. Render del kit con `subtitulos` = el guion exacto y la duración real de la voz.
 3. `vidiq_compose`: `format: "vertical"`, una escena `video` con la URL raw del `reel.mp4` y `duration` = `duracion_segundos` del manifest; `voiceover.audioUrl` = URL de la voz (`startAtSeconds` 0.3); `music.audioUrl` = una pista de `audio.musica` con los valores de `audio.mezcla`.
 4. La URL que devuelve vidIQ caduca en 12 horas: se programa en Metricool en la misma corrida (Metricool la copia a su servidor).
