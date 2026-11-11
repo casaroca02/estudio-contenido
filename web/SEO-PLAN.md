@@ -29,7 +29,7 @@ Ser el primer resultado en Google (orgánico y Google Maps) en Cali para las bú
 
 ## Backlog (el agente toma el primero pendiente)
 - [x] 5 nov: corregir «2 puntos de gas» y quitar la foto de cocina de casa.
-- [ ] Crear /que-es-una-cocina-oculta/ (explica el término: mucha gente en Cali no lo entiende).
+- [x] 11 nov: crear /que-es-una-cocina-oculta/ (explica el término: mucha gente en Cali no lo entiende).
 - [ ] Crear /cuanto-cuesta-arrendar-una-cocina-cali/ (precio, servicios, comparación con un local de referencia $5,3 M).
 - [ ] Crear /cocina-para-domicilios-cali/.
 - [ ] Crear /dark-kitchen-cali/.
@@ -37,6 +37,7 @@ Ser el primer resultado en Google (orgánico y Google Maps) en Cali para las bú
 - [ ] Páginas por nicho: postres, almuerzos, catering y eventos, marcas virtuales.
 - [ ] Mejorar el schema LocalBusiness (geo, horario 8:00–22:00, areaServed Cali y Yumbo) cuando Carlos autorice la dirección.
 - [ ] Optimizar peso de videos e imágenes (Core Web Vitals).
+- [ ] Acortar el título (hoy 74 caracteres, máx. 60) y la meta descripción (hoy 210, máx. 155) de la página principal. Es solo metadato, sin cambio visible.
 
 ## Pendientes de Carlos
 - [x] 5 nov: Cloudflare Pages conectado al repositorio (proyecto cocinaslaflora-web, carpeta `web/`); dominio cocinaslaflora.com y www movidos al proyecto nuevo.
