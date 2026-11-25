@@ -31,7 +31,7 @@ Ser el primer resultado en Google (orgánico y Google Maps) en Cali para las bú
 - [x] 5 nov: corregir «2 puntos de gas» y quitar la foto de cocina de casa.
 - [x] 11 nov: crear /que-es-una-cocina-oculta/ (explica el término: mucha gente en Cali no lo entiende).
 - [x] 18 nov: crear /cuanto-cuesta-arrendar-una-cocina-cali/ (precio, servicios, comparación con un local de referencia $5,3 M).
-- [ ] Crear /cocina-para-domicilios-cali/.
+- [x] 25 nov: crear /cocina-para-domicilios-cali/.
 - [ ] Crear /dark-kitchen-cali/.
 - [ ] Crear /cocina-industrial-arriendo-cali/.
 - [ ] Páginas por nicho: postres, almuerzos, catering y eventos, marcas virtuales.
