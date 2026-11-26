@@ -53,6 +53,12 @@ Son nuestro **cliente ideal** y el mejor espejo de cómo habla el emprendedor ga
 6. «Comenta COCINA y te mandamos fotos y precios» (CTA alterno, una vez por semana).
 7. Cuando haya autorización: entrevista o tour con un inquilino real.
 
+**Radar 26 nov 2026** (vidIQ, outliers IG y TikTok en español):
+- [x] «¿Por qué venden tanto sin local?» (idea del Radar 12 nov, reforzada por @felococina3: «PORQUE VENDEN TANTO?», 872 mil, 44,7x su mediana, montaje al ritmo) → **ficha CLF-015** (Reel, 28 nov).
+- [x] «Encontré en el norte de Cali cocinas privadas para arrendar» (formato descubrimiento: @limpiaexpress_cali, 1,2 M, 84x; @elempanadologo, cocina escondida en Cali) → ficha Idea.
+- [x] «Antes de aceptar un pedido de 100 almuerzos, revisa esto» (detrás de cámaras de pedido grande: @afuegofood, Cali, 2,8 M, 10x) → ficha Idea.
+- Patrón nuevo: «Nos preguntaron…» en el segundo 0 (@cocinandoparavender, 1,9 M, 16x) confirma la idea del Radar 9 nov «Nos preguntaron cuánto cuesta una cocina».
+
 ## 5. Lo que no se copia
 
 - No se usan videos, fotos, música, textos ni logos de estas cuentas.
