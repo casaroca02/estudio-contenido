@@ -1,0 +1,8 @@
+{"marca": "cocinas-la-flora", "codigo": "CLF-C02", "tipo": "carrusel", "laminas": [
+{"tipo": "personaje", "personaje": "emprendedora", "pose": "celular", "titulo": "5 dudas antes de *arrendar*", "texto": "Respuestas cortas. Desliza →"},
+{"tipo": "claro", "titulo": "«Lo voy a *pensar*»", "texto": "Es normal. Piénsalo con datos claros en la mano."},
+{"tipo": "dato", "variante": "salvia", "dato": "$1,3 M", "titulo": "¿Cuánto pago al *mes*?", "texto": "Desde, solo el espacio. Servicios cerca de $350.000 al mes en promedio."},
+{"tipo": "vs", "variante": "oscuro", "titulo": "¿Y si sigo en *casa*?", "izq": {"titulo": "En tu casa", "items": ["Compartes la cocina", "Produces lo que cabe"]}, "der": {"titulo": "Cocina privada", "items": ["100 % para tu negocio", "Solo espacio, con equipos u opción de compra"]}},
+{"tipo": "checklist", "variante": "durazno", "titulo": "¿Es *compartida*?", "items": ["No: cocina 100 % privada", "2 o más puntos de gas: nos ajustamos a tu necesidad", "Agua y electricidad", "Contrato desde 6 meses"], "nota": "La Flora · Chipichape, norte de Cali"},
+{"tipo": "pasos", "titulo": "¿Cómo *empiezo*?", "items": ["Escríbenos|COCINA al 320 770 9238", "Visítanos|Conoce la cocina en La Flora", "Elige|Solo espacio, con equipos u opción de compra"]}
+]}
