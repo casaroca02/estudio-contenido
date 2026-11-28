@@ -1,0 +1,87 @@
+{
+ "marca": "cocinas-la-flora",
+ "codigo": "CLF-005",
+ "tipo": "reel",
+ "escenas": [
+  {
+   "modo": "kinetic",
+   "titulo": "POV: ya no cocinas en *casa*",
+   "texto": "Tu marca de domicilios tiene cocina propia",
+   "segundos": 3.4,
+   "fs": 140,
+   "fondo": "acento",
+   "top": 640
+  },
+  {
+   "modo": "foto",
+   "titulo": "Tu cocina, solo *tuya*",
+   "imagen": "assets/reales/modulo_cocina_puerta.jpg",
+   "puntos": [
+    {
+     "x": 54,
+     "y": 40,
+     "texto": "Campana extractora"
+    },
+    {
+     "x": 49,
+     "y": 57,
+     "texto": "2 o más puntos de gas",
+     "lado": "izq"
+    },
+    {
+     "x": 66,
+     "y": 66,
+     "texto": "Lavaplatos en acero",
+     "lado": "izq"
+    },
+    {
+     "x": 86,
+     "y": 80,
+     "texto": "Puerta propia: 100 % privada",
+     "lado": "izq"
+    }
+   ],
+   "texto": "Foto real · La Flora, Chipichape",
+   "segundos": 5
+  },
+  {
+   "modo": "checklist",
+   "titulo": "Nos ajustamos a tu *necesidad*",
+   "items": [
+    "2 o más puntos de gas",
+    "Agua y electricidad",
+    "Solo espacio o con equipos"
+   ],
+   "segundos": 3.6,
+   "mini": "assets/reales/modulo_entrada_vertical.jpg",
+   "mini_top": 1200,
+   "mini_alto": 520,
+   "mini_delay": 1.6
+  },
+  {
+   "modo": "contador",
+   "antes": "Tu cocina desde",
+   "valor": 1.3,
+   "prefijo": "$",
+   "sufijo": " M",
+   "titulo": "al mes · solo el *espacio*",
+   "texto": "Contrato desde 6 meses",
+   "segundos": 3.6,
+   "mini": "assets/reales/modulo_cocina_vertical.jpg",
+   "mini_top": 1080,
+   "mini_alto": 600,
+   "mini_delay": 1.6
+  },
+  {
+   "modo": "personaje",
+   "personaje": "andres",
+   "pose": "olla",
+   "titulo": "Arranque *rápido*, poco papeleo",
+   "texto": "Cocina oculta, apoyo visible",
+   "segundos": 3.4
+  }
+ ],
+ "cta_segundos": 3.4,
+ "musica": "Que la gasolina",
+ "musica_inicio": 10
+}
